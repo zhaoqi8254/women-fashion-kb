@@ -1,4 +1,4 @@
-// assets/charts.js — 女装穿搭知识库 图表逻辑
+// assets/charts.js — 女装穿搭知识库 图表逻辑（进入视口再初始化）
 (function () {
   if (typeof echarts === 'undefined') return;
 
@@ -13,11 +13,11 @@
   var font = style.getPropertyValue('--font').trim();
 
   var baseText = { fontFamily: font, color: muted };
+  var instances = [];
 
-  // ---------- Chart 1: 服装电商退货率区间（横向条形） ----------
-  var el1 = document.getElementById('chart-returns');
-  if (el1) {
-    var c1 = echarts.init(el1, null, { renderer: 'svg' });
+  // ---------- 图 7-1：服装电商退货率区间（横向条形） ----------
+  function buildReturns(el) {
+    var c = echarts.init(el, null, { renderer: 'svg' });
     var cats = [
       '得物（服饰类目）',
       '韩都衣舍 · 日常',
@@ -28,7 +28,7 @@
       '国内女装 · 直播场景'
     ];
     var vals = [10, 11, 25, 40, 50, 55, 80];
-    c1.setOption({
+    c.setOption({
       animation: false,
       textStyle: baseText,
       grid: { left: 4, right: 56, top: 12, bottom: 8, containLabel: true },
@@ -75,14 +75,13 @@
         }
       }]
     });
-    window.addEventListener('resize', function () { c1.resize(); });
+    return c;
   }
 
-  // ---------- Chart 2: 服装直播话术时间配比（环形） ----------
-  var el2 = document.getElementById('chart-flow');
-  if (el2) {
-    var c2 = echarts.init(el2, null, { renderer: 'svg' });
-    c2.setOption({
+  // ---------- 图 8-1：服装直播话术时间配比（环形） ----------
+  function buildFlow(el) {
+    var c = echarts.init(el, null, { renderer: 'svg' });
+    c.setOption({
       animation: false,
       textStyle: baseText,
       color: [accent, accent2, accent + '99', muted],
@@ -116,14 +115,13 @@
         ]
       }]
     });
-    window.addEventListener('resize', function () { c2.resize(); });
+    return c;
   }
 
-  // ---------- Chart 3: 配色比例 60-30-10（堆叠条） ----------
-  var el3 = document.getElementById('chart-color');
-  if (el3) {
-    var c3 = echarts.init(el3, null, { renderer: 'svg' });
-    c3.setOption({
+  // ---------- 图 5-1：配色比例 60-30-10（堆叠条） ----------
+  function buildColor(el) {
+    var c = echarts.init(el, null, { renderer: 'svg' });
+    c.setOption({
       animation: false,
       textStyle: baseText,
       grid: { left: 8, right: 8, top: 10, bottom: 28, containLabel: true },
@@ -178,6 +176,54 @@
         }
       ]
     });
-    window.addEventListener('resize', function () { c3.resize(); });
+    return c;
   }
+
+  var registry = [
+    { id: 'chart-returns', build: buildReturns },
+    { id: 'chart-flow', build: buildFlow },
+    { id: 'chart-color', build: buildColor }
+  ];
+
+  function initOne(item, el) {
+    try {
+      var c = item.build(el);
+      if (c) instances.push(c);
+    } catch (e) { /* 单个图表失败不影响其它 */ }
+  }
+
+  function initAll() {
+    registry.forEach(function (item) {
+      var el = document.getElementById(item.id);
+      if (el) initOne(item, el);
+    });
+  }
+
+  // 进入视口（含 200px 预量）后再初始化，减少首屏开销
+  if ('IntersectionObserver' in window) {
+    var pending = registry.slice();
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        for (var i = pending.length - 1; i >= 0; i--) {
+          if (document.getElementById(pending[i].id) === entry.target) {
+            initOne(pending[i], entry.target);
+            pending.splice(i, 1);
+          }
+        }
+        io.unobserve(entry.target);
+        if (!pending.length) io.disconnect();
+      });
+    }, { rootMargin: '200px 0px' });
+    registry.forEach(function (item) {
+      var el = document.getElementById(item.id);
+      if (el) io.observe(el);
+    });
+  } else {
+    initAll();
+  }
+
+  window.addEventListener('resize', function () {
+    instances.forEach(function (c) { c.resize(); });
+  });
 })();

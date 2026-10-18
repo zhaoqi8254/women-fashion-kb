@@ -5,16 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>中大淑穿搭知识库 · 方法 · 运营</title>
+  <meta name="description" content="给 40–60 岁女性与中大淑女装运营者的实操手册：中年必备基础款、显瘦公式、身形诊断、色彩搭配、场景穿搭、尺码退货率、直播话术与选品拆解，可检索、可分享、可落地。">
+  <meta name="theme-color" content="#FAF7F3">
+  <meta name="author" content="中大淑穿搭知识库">
+  <meta name="keywords" content="中大淑,中年女装,40岁穿搭,50岁穿搭,显瘦,遮肚子,妈妈装,婚宴穿搭,女装运营,直播话术">
+
+  <!-- Open Graph / 分享卡片 -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="中大淑穿搭知识库 · 方法 · 运营">
+  <meta property="og:description" content="把中大淑穿搭拆成可检索、可分享、可落地的知识库：从遮肉公式到尺码退货率与直播话术，给 40–60 岁女性与中大淑电商运营者。">
+  <meta property="og:image" content="assets/hero.jpg">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="中大淑穿搭知识库 · 方法 · 运营">
+  <meta name="twitter:description" content="40–60 岁中大淑穿搭与运营实操手册，可检索、可分享、可落地。">
+  <meta name="twitter:image" content="assets/hero.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%239E4B33'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='%23fff' font-family='Georgia,serif'%3E%E7%A9%BF%3C/text%3E%3C/svg%3E">
+
+  <!-- 首屏字体预加载 -->
+  <link rel="preload" href="./_shared/fonts/WorkSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./_shared/fonts/CrimsonPro-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
   <style>
-    /* === Font faces === */
-    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
-    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
-    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
-    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
-    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
-    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
-    @font-face { font-family: 'DMMono'; src: url('./_shared/fonts/DMMono-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+    /* === Font faces (WOFF2 优先，TTF 回退) === */
+    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Regular.woff2') format('woff2'), url('./_shared/fonts/CrimsonPro-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Bold.woff2') format('woff2'), url('./_shared/fonts/CrimsonPro-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Italic.woff2') format('woff2'), url('./_shared/fonts/CrimsonPro-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Regular.woff2') format('woff2'), url('./_shared/fonts/WorkSans-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Bold.woff2') format('woff2'), url('./_shared/fonts/WorkSans-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Italic.woff2') format('woff2'), url('./_shared/fonts/WorkSans-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'DMMono'; src: url('./_shared/fonts/DMMono-Regular.woff2') format('woff2'), url('./_shared/fonts/DMMono-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
   </style>
 
   <style>
@@ -22,7 +43,7 @@
       --bg: #FAF7F3;
       --bg2: #F1EAE1;
       --ink: #1F1B18;
-      --muted: #7C736A;
+      --muted: #6A6157;
       --rule: #E5DCD1;
       --accent: #9E4B33;
       --accent2: #4E5F55;
@@ -34,7 +55,7 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
-    body { font-family: var(--font); color: var(--ink); background: var(--bg); line-height: 1.78; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; -webkit-tap-highlight-color: transparent; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
+    body { font-family: var(--font); color: var(--ink); background-color: var(--bg); background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='140'%20height='140'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.85'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='140'%20height='140'%20filter='url(%23n)'%20opacity='0.028'/%3E%3C/svg%3E"); line-height: 1.78; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; -webkit-tap-highlight-color: transparent; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
     a { color: var(--accent); text-decoration: none; -webkit-tap-highlight-color: transparent; }
     a:hover { text-decoration: underline; }
     img { max-width: 100%; height: auto; display: block; }
@@ -122,12 +143,15 @@
     /* === Content sections === */
     .doc { max-width: var(--max); margin: 0 auto; padding: 32px 28px 40px; }
     .part { margin: 2.6rem 0 1rem; }
-    .part-kicker { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+    .part-kicker { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: .55rem; }
+    .part-kicker::before { content: ''; width: 24px; height: 2px; background: var(--accent); flex-shrink: 0; }
+    .part-kicker::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
     .part-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-top: .2rem; }
     .doc-sec { margin-bottom: 2.8rem; border: 1px solid var(--rule); border-radius: 16px; padding: 28px 28px 24px; background: var(--bg); scroll-margin-top: calc(var(--header-h) + 12px); }
     .sec-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 1rem; }
     .sec-head-text { flex: 1; min-width: 0; }
-    .sec-num { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .sec-num { display: inline-flex; align-items: center; gap: .35rem; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); background: var(--bg); border: 1px solid var(--rule); border-radius: 999px; padding: .12rem .55rem; }
+    .sec-num::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
     h2 { font-family: var(--font-display); font-size: 1.85rem; font-weight: 700; line-height: 1.18; margin-top: .25rem; }
     h3 { font-size: 1.15rem; font-weight: 700; margin: 1.5rem 0 .55rem; }
     h4 { font-size: 1rem; font-weight: 700; margin-bottom: .3rem; }
@@ -163,8 +187,76 @@
     .chart-box { border: 1px solid var(--rule); border-radius: 12px; padding: .4rem; background: var(--bg); }
 
     .diagram { margin: 1.6rem 0; }
-    .diagram .mermaid { background: var(--bg2); border: 1px solid var(--rule); border-radius: 12px; padding: 1rem; overflow-x: auto; text-align: center; }
     .diagram figcaption { font-size: .78rem; color: var(--muted); margin-top: .5rem; text-align: center; }
+
+    /* === 零依赖静态图（替代 Mermaid） === */
+    .dg { background: var(--bg2); border: 1px solid var(--rule); border-radius: 12px; padding: 1.3rem 1.1rem; }
+
+    /* 决策树 */
+    .ftree { display: flex; flex-direction: column; align-items: center; }
+    .ft-root { background: var(--ink); color: var(--bg); border-radius: 999px; padding: .5rem 1.1rem; font-size: .9rem; font-weight: 600; text-align: center; }
+    .ft-link { position: relative; width: 2px; height: 28px; background: var(--rule); }
+    .ft-link span { position: absolute; top: 50%; left: 9px; transform: translateY(-50%); font-family: var(--font-mono); font-size: .66rem; color: var(--accent); background: var(--bg2); padding: 0 .35rem; white-space: nowrap; }
+    .ft-dec { width: 100%; border: 1px dashed var(--accent); border-radius: 10px; padding: .85rem .9rem; background: var(--bg); }
+    .ft-q { font-weight: 700; font-size: .92rem; text-align: center; margin-bottom: .65rem; }
+    .ft-q::before { content: "◇ "; color: var(--accent); }
+    .ft-row { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+    .ft-leaf { flex: 1 1 170px; border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 8px; padding: .5rem .7rem; background: var(--bg2); }
+    .ft-leaf b { display: block; font-size: .86rem; color: var(--accent); }
+    .ft-leaf span { display: block; font-size: .78rem; color: var(--muted); margin-top: .15rem; line-height: 1.5; }
+
+    /* 时间轴 */
+    .tl { list-style: none; margin: 0; display: flex; gap: .5rem; padding: 1.4rem .1rem .1rem; }
+    .tl-item { flex: 1; position: relative; padding-top: 1.25rem; }
+    .tl-item::before { content: ''; position: absolute; top: .1rem; left: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--bg2); }
+    .tl-item::after { content: ''; position: absolute; top: .52rem; left: 11px; right: -.5rem; height: 2px; background: var(--rule); }
+    .tl-item:last-child::after { display: none; }
+    .tl-m { font-family: var(--font-mono); font-size: .8rem; font-weight: 700; color: var(--accent); }
+    .tl-body { font-size: .78rem; color: var(--muted); line-height: 1.55; margin-top: .2rem; }
+
+    /* 四维拆解 */
+    .ff { display: flex; flex-direction: column; align-items: center; }
+    .ff-root { background: var(--ink); color: var(--bg); border-radius: 10px; padding: .55rem 1.1rem; font-weight: 700; font-size: .92rem; }
+    .ff-arrow { width: 2px; height: 22px; background: var(--rule); }
+    .ff-dims { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; width: 100%; }
+    .ff-dim { border: 1px solid var(--rule); border-top: 3px solid var(--accent2); border-radius: 8px; padding: .55rem .6rem; background: var(--bg); text-align: center; }
+    .ff-dim b { display: block; font-size: .86rem; color: var(--accent2); }
+    .ff-dim span { display: block; font-size: .74rem; color: var(--muted); margin-top: .2rem; line-height: 1.5; }
+    .ff-merge { background: var(--accent); color: #fff; border-radius: 10px; padding: .5rem 1.2rem; font-weight: 700; font-size: .9rem; }
+    .ff-result { border: 1px solid var(--accent); border-radius: 10px; padding: .55rem 1rem; font-size: .84rem; color: var(--ink); background: var(--bg); text-align: center; }
+
+    /* 显瘦公式迷你对比 */
+    .mini-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.2rem 0; }
+    .mc { border: 1px solid var(--rule); border-radius: 12px; padding: .9rem .9rem .8rem; background: var(--bg2); }
+    .mc-fig { display: flex; flex-direction: column; align-items: center; height: 146px; margin-bottom: .55rem; }
+    .mc-head { width: 30px; height: 30px; border-radius: 50%; background: var(--muted); margin-bottom: 3px; }
+    .mc-top, .mc-bot { width: 62px; }
+    .mc.bad .mc-top { height: 55px; background: var(--rule); border-radius: 7px 7px 0 0; }
+    .mc.bad .mc-bot { height: 55px; background: var(--muted); border-radius: 0 0 7px 7px; margin-top: 3px; }
+    .mc.good .mc-top { height: 34px; background: var(--accent2); border-radius: 7px 7px 0 0; }
+    .mc.good .mc-bot { height: 76px; background: var(--accent); border-radius: 0 0 7px 7px; margin-top: 3px; }
+    .mc-tag { text-align: center; font-size: .82rem; font-weight: 600; line-height: 1.5; }
+    .mc.bad .mc-tag { color: var(--muted); }
+    .mc.good .mc-tag { color: var(--accent); }
+
+    /* 桌面右侧粘性目录 */
+    .toc-side { display: none; }
+    .toc-side .toc-t { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: .7rem; }
+    .toc-side a { display: block; padding: .32rem .7rem; font-size: .82rem; color: var(--muted); border-left: 2px solid var(--rule); transition: color .15s, border-color .15s, background .15s; }
+    .toc-side a:hover { color: var(--ink); background: var(--bg2); text-decoration: none; }
+    .toc-side a.active { color: var(--accent); border-left-color: var(--accent); font-weight: 600; }
+
+    /* 克制动效（尊重 prefers-reduced-motion） */
+    @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-inner .kicker, .hero-inner h1, .hero-inner .lede, .hero-inner .meta { animation: rise .8s cubic-bezier(.2,.7,.2,1) both; }
+      .hero-inner h1 { animation-delay: .08s; }
+      .hero-inner .lede { animation-delay: .16s; }
+      .hero-inner .meta { animation-delay: .24s; }
+      .hero-figure { animation: rise .9s cubic-bezier(.2,.7,.2,1) .2s both; }
+      .doc-sec.reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s cubic-bezier(.2,.7,.2,1); }
+      .doc-sec.reveal.in { opacity: 1; transform: none; }
+    }
 
     .link-list { display: grid; gap: .7rem; margin: 1rem 0 1.4rem; }
     .link-card { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; border: 1px solid var(--rule); border-radius: 12px; padding: .85rem 1rem; background: var(--bg); transition: border-color .15s, background .15s; min-height: 44px; text-decoration: none; color: inherit; }
@@ -221,6 +313,11 @@
       .part-intro { grid-template-columns: 108px 1fr; gap: 1rem; }
       .stats { grid-template-columns: 1fr 1fr; }
       .search-wrap { max-width: none; }
+      .ff-dims { grid-template-columns: 1fr 1fr; }
+      .tl { flex-direction: column; gap: 0; padding: 1.3rem 0 .1rem; }
+      .tl-item { padding: .55rem 0 .55rem 1.55rem; }
+      .tl-item::before { top: .95rem; left: 0; }
+      .tl-item::after { top: 1.35rem; bottom: -.55rem; left: 5px; right: auto; width: 2px; height: auto; }
     }
     @media (max-width: 640px) {
       html { font-size: 15px; }
@@ -239,6 +336,12 @@
       .brand .name small { display: none; }
       .search-wrap input { height: 36px; font-size: .85rem; }
       footer .sources { padding: 0 16px; }
+      .mini-compare { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 1200px) {
+      .doc { display: grid; grid-template-columns: minmax(0, 1fr) 190px; column-gap: 34px; max-width: 1400px; }
+      .doc > .toc-side { display: block; grid-column: 2; grid-row: 1 / span 100; position: sticky; top: calc(var(--header-h) + 24px); align-self: start; }
+      .doc > :not(.toc-side) { grid-column: 1; }
     }
     @media print {
       .topbar, .fab-top, .pain-quick, .drawer, .fav-view { display: none !important; }
@@ -280,7 +383,7 @@
         </div>
       </div>
       <figure class="hero-figure">
-        <img src="assets/hero.jpg" alt="中大淑优雅穿搭主题封面图">
+        <img src="assets/hero.webp" alt="中大淑优雅穿搭主题封面图">
       </figure>
     </div>
   </section>
@@ -300,6 +403,22 @@
 
   <!-- ============ MAIN CONTENT ============ -->
   <main class="doc" id="main">
+
+    <nav class="toc-side" aria-label="章节目录">
+      <div class="toc-t">目录</div>
+      <a href="#s1">01 · 中年必备基础款</a>
+      <a href="#s2">02 · 显瘦搭配公式</a>
+      <a href="#s3">03 · 穿搭底层逻辑</a>
+      <a href="#s4">04 · 身形诊断</a>
+      <a href="#s5">05 · 色彩搭配</a>
+      <a href="#s6">06 · 场景穿搭指南</a>
+      <a href="#s7">07 · 尺码与退货率</a>
+      <a href="#s8">08 · 直播带货话术</a>
+      <a href="#s9">09 · 内容选题日历</a>
+      <a href="#s10">10 · 竞品与爆款拆解</a>
+      <a href="#s11">11 · 实用资源链接库</a>
+      <a href="#s12">12 · 落地清单</a>
+    </nav>
 
     <div class="part">
       <div class="part-kicker">Part 01</div>
@@ -343,8 +462,18 @@
         <button class="fav-btn" data-id="s2" aria-label="收藏">☆</button>
       </div>
       <div class="part-intro">
-        <img src="assets/thumb-formula.jpg" alt="搭配公式配图">
+        <img src="assets/thumb-formula.webp" alt="搭配公式配图">
         <p class="lead">中年身材的核心矛盾是「腰腹发福 + 皮肤松弛」。下面九条公式都围绕一个目标：<mark class="key">转移视线、拉长线条、遮住赘肉</mark>，让穿搭既得体又显瘦。</p>
+      </div>
+      <div class="mini-compare">
+        <div class="mc bad">
+          <div class="mc-fig"><span class="mc-head"></span><span class="mc-top"></span><span class="mc-bot"></span></div>
+          <div class="mc-tag">✕ 50 / 50 对半切 · 拦腰截断显矮</div>
+        </div>
+        <div class="mc good">
+          <div class="mc-fig"><span class="mc-head"></span><span class="mc-top"></span><span class="mc-bot"></span></div>
+          <div class="mc-tag">✓ 上短下长 1 : 3 · 腰线上移显高显瘦</div>
+        </div>
       </div>
       <div class="table-wrap">
         <table>
@@ -398,21 +527,38 @@
         <button class="fav-btn" data-id="s4" aria-label="收藏">☆</button>
       </div>
       <div class="part-intro">
-        <img src="assets/thumb-body.jpg" alt="身形分析配图">
+        <img src="assets/thumb-body.webp" alt="身形分析配图">
         <p class="lead">先判断身形，再谈搭配。40 岁后最常见的变化是<strong>腰腹脂肪堆积</strong>（苹果形增多）和<strong>胯部变宽</strong>（梨形更明显）。下面的决策树帮你快速定位。</p>
       </div>
       <figure class="diagram">
-        <pre class="mermaid">
-flowchart TB
-  S["站在镜前，观察肩、腰、胯、腹的轮廓"] --> Q1{"腰腹是否明显<br/>比肩胯更突出？"}
-  Q1 -->|是| O["苹果形 O 型<br/>V 领 · 高腰 · 暗色下装 · 遮肚子"]
-  Q1 -->|否| Q2{"肩宽 vs 胯宽？"}
-  Q2 -->|肩明显更宽| Y["倒三角 Y 型<br/>上深下浅 · 上简下繁 · 柔化肩线"]
-  Q2 -->|胯明显更宽| A["梨形 A 型<br/>上露下遮 · A 字轮廓 · 深色下装"]
-  Q2 -->|大致相当| Q3{"腰部是否有明显内收？"}
-  Q3 -->|有| X["沙漏形 X 型<br/>收腰版型 · 秀曲线"]
-  Q3 -->|没有| H["直筒 H 型<br/>收腰单品造腰线 · 叠穿"]
-        </pre>
+        <div class="dg">
+          <div class="ftree">
+            <div class="ft-root">站在镜前，观察肩、腰、胯、腹的轮廓</div>
+            <div class="ft-link"></div>
+            <div class="ft-dec">
+              <div class="ft-q">腰腹是否明显比肩胯更突出？</div>
+              <div class="ft-row">
+                <div class="ft-leaf"><b>是 → 苹果形 O 型</b><span>V 领 · 高腰 · 暗色下装 · 遮肚子</span></div>
+              </div>
+            </div>
+            <div class="ft-link"><span>否</span></div>
+            <div class="ft-dec">
+              <div class="ft-q">肩宽 vs 胯宽？</div>
+              <div class="ft-row">
+                <div class="ft-leaf"><b>肩明显更宽 → 倒三角 Y 型</b><span>上深下浅 · 上简下繁 · 柔化肩线</span></div>
+                <div class="ft-leaf"><b>胯明显更宽 → 梨形 A 型</b><span>上露下遮 · A 字轮廓 · 深色下装</span></div>
+              </div>
+            </div>
+            <div class="ft-link"><span>大致相当</span></div>
+            <div class="ft-dec">
+              <div class="ft-q">腰部是否有明显内收？</div>
+              <div class="ft-row">
+                <div class="ft-leaf"><b>有 → 沙漏形 X 型</b><span>收腰版型 · 秀曲线</span></div>
+                <div class="ft-leaf"><b>没有 → 直筒 H 型</b><span>收腰单品造腰线 · 叠穿</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
         <figcaption>图 4-1：身形自测决策树</figcaption>
       </figure>
       <div class="grid cols-2">
@@ -434,7 +580,7 @@ flowchart TB
         <button class="fav-btn" data-id="s5" aria-label="收藏">☆</button>
       </div>
       <div class="part-intro">
-        <img src="assets/thumb-color.jpg" alt="色彩搭配配图">
+        <img src="assets/thumb-color.webp" alt="色彩搭配配图">
         <p class="lead">中年女性的肤色会随年龄变化（暗黄、色斑、暗沉），穿对颜色能<mark class="key">瞬间提气色、显年轻</mark>，穿错则显老显病态。核心是：找对适合自己的色，大面积用安全色，小面积用点缀色。</p>
       </div>
       <h3>1 · 三色原则，进阶为 60-30-10</h3>
@@ -510,7 +656,7 @@ flowchart TB
         <button class="fav-btn" data-id="s7" aria-label="收藏">☆</button>
       </div>
       <div class="part-intro">
-        <img src="assets/thumb-ops.jpg" alt="电商运营配图">
+        <img src="assets/thumb-ops.webp" alt="电商运营配图">
         <p class="lead">退货率是女装经营<strong>第一成本项</strong>，而中大淑客群对尺码更敏感（身材变化大、版型不合直接退）。尺码表做得越细，退货越少。</p>
       </div>
       <h3>7.1 退货率有多高</h3>
@@ -591,17 +737,17 @@ flowchart TB
       </div>
       <p class="lead">通用主线：<mark class="key">季前上、季中促、季末清</mark>。中大淑品类要特别关注<strong>母亲节、妇女节、春节</strong>等送礼节点。</p>
       <figure class="diagram">
-        <pre class="mermaid">
-timeline
-  title 中大淑女装全年上新与内容节奏
-  1–2月 : 冬装清仓 · 新年新衣 · 春节送礼
-  3月 : 春季上新 · 3·8 妇女节主题
-  4月 : 春装收尾 · 夏装预热 · 母亲节备货
-  5–6月 : 夏季主推 · 母亲节 · 618
-  7–8月 : 夏清仓 · 早秋上新
-  9–10月 : 秋装旺季 · 冬装备货 · 国庆
-  11–12月 : 双11 / 双12 · 冬装主推 · 年终送礼
-        </pre>
+        <div class="dg">
+          <ol class="tl">
+            <li class="tl-item"><div class="tl-m">1–2 月</div><div class="tl-body">冬装清仓 · 新年新衣 · 春节送礼</div></li>
+            <li class="tl-item"><div class="tl-m">3 月</div><div class="tl-body">春季上新 · 3·8 妇女节主题</div></li>
+            <li class="tl-item"><div class="tl-m">4 月</div><div class="tl-body">春装收尾 · 夏装预热 · 母亲节备货</div></li>
+            <li class="tl-item"><div class="tl-m">5–6 月</div><div class="tl-body">夏季主推 · 母亲节 · 618</div></li>
+            <li class="tl-item"><div class="tl-m">7–8 月</div><div class="tl-body">夏清仓 · 早秋上新</div></li>
+            <li class="tl-item"><div class="tl-m">9–10 月</div><div class="tl-body">秋装旺季 · 冬装备货 · 国庆</div></li>
+            <li class="tl-item"><div class="tl-m">11–12 月</div><div class="tl-body">双 11 / 双 12 · 冬装主推 · 年终送礼</div></li>
+          </ol>
+        </div>
         <figcaption>图 9-1：全年节奏主线</figcaption>
       </figure>
       <div class="table-wrap">
@@ -630,18 +776,22 @@ timeline
       </div>
       <p class="lead">竞品 = <mark class="key">抢同一批中大淑客户、卖同类商品、价格带接近（±20%）</mark>的店铺。国内中大淑头部品牌是最好的拆解对象。按四维拆解。</p>
       <figure class="diagram">
-        <pre class="mermaid">
-flowchart LR
-  C["竞品 / 爆款拆解"] --> D1["拆卖点<br/>主图首句 · 详情页首屏"]
-  C --> D2["拆评价<br/>重点看差评 · 尺码 / 质量 / 物流"]
-  C --> D3["拆内容<br/>直播排品与话术"]
-  C --> D4["拆数据<br/>销量 / 价格 / 评分 / 发货时效"]
-  D1 --> A["差异化落地"]
-  D2 --> A
-  D3 --> A
-  D4 --> A
-  A --> E["补短板 · 组套装 · 改主图 / 文案 / 价格"]
-        </pre>
+        <div class="dg">
+          <div class="ff">
+            <div class="ff-root">竞品 / 爆款拆解</div>
+            <div class="ff-arrow"></div>
+            <div class="ff-dims">
+              <div class="ff-dim"><b>拆卖点</b><span>主图首句 · 详情页首屏</span></div>
+              <div class="ff-dim"><b>拆评价</b><span>重点看差评 · 尺码 / 质量 / 物流</span></div>
+              <div class="ff-dim"><b>拆内容</b><span>直播排品与话术</span></div>
+              <div class="ff-dim"><b>拆数据</b><span>销量 / 价格 / 评分 / 发货时效</span></div>
+            </div>
+            <div class="ff-arrow"></div>
+            <div class="ff-merge">差异化落地</div>
+            <div class="ff-arrow"></div>
+            <div class="ff-result">补短板 · 组套装 · 改主图 / 文案 / 价格</div>
+          </div>
+        </div>
         <figcaption>图 10-1：四维拆解框架</figcaption>
       </figure>
       <h3>国内中大淑头部品牌速览</h3>
@@ -831,20 +981,8 @@ flowchart LR
     </div>
   </footer>
 
-  <script src="./_shared/js/echarts.min.js"></script>
-  <script src="./_shared/js/mermaid.min.js"></script>
+  <script defer src="./_shared/js/echarts.min.js"></script>
   <script>
-    if (window.mermaid) {
-      mermaid.initialize({
-        startOnLoad: true, theme: 'base', securityLevel: 'loose',
-        themeVariables: {
-          fontFamily: "'WorkSans','PingFang SC','Microsoft YaHei',sans-serif", fontSize: '14px',
-          primaryColor: '#F1EAE1', primaryTextColor: '#1F1B18', primaryBorderColor: '#9E4B33',
-          lineColor: '#7C736A', secondaryColor: '#E5DCD1', tertiaryColor: '#FAF7F3', clusterBorders: '#E5DCD1'
-        }
-      });
-    }
-
     // ===== Favorites (localStorage) =====
     const FAV_KEY = 'wfwkb_favs';
     function getFavs() { try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch(e) { return []; } }
@@ -897,29 +1035,50 @@ flowchart LR
     document.getElementById('favView').addEventListener('click', e => { if (e.target.id === 'favView') e.target.classList.remove('active'); });
     updateFavBadge();
 
-    // ===== Search =====
+    // ===== Search（多关键词 AND + 同义词归一 + 命中高亮） =====
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
     function escapeHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
-    function doSearch(q) {
-      q = q.trim();
+    const SYN = {
+      '拜拜肉': ['手臂'], '蝴蝶袖': ['手臂'], '手臂': ['拜拜肉', '蝴蝶袖'],
+      '遮肚子': ['腰腹', '肚子'], '肚子': ['腰腹'], '大肚腩': ['腰腹'], '小肚子': ['腰腹'], '水桶腰': ['腰腹'],
+      '显白': ['颜色', '色彩'], '显色': ['颜色'], '色系': ['颜色', '色彩'],
+      '婚宴': ['场景', '婚礼'], '婚礼': ['婚宴', '场景'], '见家长': ['场景'],
+      '妈妈装': ['中大淑', '中年'], '妈妈': ['中大淑'], '中年': ['中大淑'],
+      '显老': ['装嫩', '年轻'], '装嫩': ['显老'],
+      '退货': ['尺码', '退换'], '尺码': ['退货', '码数'], '码数': ['尺码'],
+      '话术': ['直播'], '直播': ['话术'], '选品': ['竞品', '拆解'], '竞品': ['选品', '拆解'],
+      '显瘦': ['遮肉', '藏肉'], '遮肉': ['显瘦'], '藏肉': ['显瘦']
+    };
+    function escRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+    function doSearch(raw) {
+      const q = raw.trim();
       if (!q) { searchResults.classList.remove('active'); searchResults.innerHTML = ''; return; }
-      const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-      const items = [];
+      const groups = q.toLowerCase().split(/\s+/).filter(Boolean).map(t => [t].concat(SYN[t] || []));
+      const res = [];
       document.querySelectorAll('.doc-sec').forEach(sec => {
+        const text = sec.textContent;
+        const hay = text.toLowerCase();
         const title = sec.querySelector('h2')?.textContent || '';
         const cat = sec.querySelector('.sec-num')?.textContent || '';
-        const text = sec.textContent;
-        const idx = text.search(re);
-        if (idx >= 0 || title.toLowerCase().includes(q.toLowerCase())) {
-          const start = Math.max(0, idx - 20);
-          const snippet = text.slice(start, start + 80).replace(/\s+/g, ' ');
-          const hlSnippet = snippet.replace(re, m => `<mark class="hl">${m}</mark>`);
-          items.push(`<a class="sr-item" href="#${sec.id}"><div class="sr-cat">${escapeHtml(cat)}</div><div class="sr-text">${escapeHtml(title)}<br><span style="color:var(--muted);font-size:.8rem">${hlSnippet}…</span></div></a>`);
-        }
+        if (!groups.every(g => g.some(t => hay.includes(t)))) return;
+        let idx = -1, hit = '';
+        groups.forEach(g => g.forEach(t => { const i = hay.indexOf(t); if (i >= 0 && (idx < 0 || i < idx)) { idx = i; hit = t; } }));
+        let snippet;
+        if (idx >= 0) {
+          const start = Math.max(0, idx - 18);
+          snippet = text.slice(start, start + 82).replace(/\s+/g, ' ').replace(new RegExp(escRe(hit), 'gi'), m => `<mark class="hl">${m}</mark>`);
+        } else { snippet = text.slice(0, 76).replace(/\s+/g, ' '); }
+        const titleHit = groups.some(g => g.some(t => title.toLowerCase().includes(t)));
+        res.push({ id: sec.id, cat, title, snippet, score: titleHit ? 0 : 1 });
       });
-      if (!items.length) { searchResults.innerHTML = '<div class="sr-empty">没有找到相关内容</div>'; }
-      else { searchResults.innerHTML = items.slice(0, 12).join(''); }
+      res.sort((a, b) => a.score - b.score);
+      if (!res.length) { searchResults.innerHTML = '<div class="sr-empty">没有找到相关内容</div>'; }
+      else {
+        searchResults.innerHTML = res.slice(0, 12).map(it =>
+          `<a class="sr-item" href="#${it.id}"><div class="sr-cat">${escapeHtml(it.cat)}</div><div class="sr-text">${escapeHtml(it.title)}<br><span style="color:var(--muted);font-size:.8rem">${it.snippet}…</span></div></a>`
+        ).join('');
+      }
       searchResults.classList.add('active');
     }
     let searchTimer;
@@ -954,7 +1113,34 @@ flowchart LR
     const fabTop = document.getElementById('fabTop');
     window.addEventListener('scroll', () => { fabTop.classList.toggle('show', window.scrollY > 400); }, { passive: true });
     fabTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ===== 滚动揭示（尊重 prefers-reduced-motion） =====
+    (function () {
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) return;
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); obs.unobserve(en.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+      document.querySelectorAll('.doc-sec').forEach(s => { s.classList.add('reveal'); io.observe(s); });
+    })();
+
+    // ===== 桌面侧边目录高亮 =====
+    (function () {
+      const links = Array.from(document.querySelectorAll('.toc-side a'));
+      if (!links.length || !('IntersectionObserver' in window)) return;
+      const map = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (!en.isIntersecting) return;
+          links.forEach(l => l.classList.remove('active'));
+          const a = map.get(en.target.id);
+          if (a) a.classList.add('active');
+        });
+      }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+      document.querySelectorAll('.doc-sec').forEach(s => io.observe(s));
+      links[0].classList.add('active');
+    })();
   </script>
-  <script src="assets/charts.js"></script>
+  <script defer src="assets/charts.js"></script>
 </body>
 </html>
