@@ -373,10 +373,9 @@
     .mini-label { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; }
 
     /* 痛点图文入口 */
-    .pain-card { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--rule); border-radius: 14px; padding: 0; overflow: hidden; background: var(--bg); color: var(--ink); text-decoration: none; transition: border-color .15s, background .15s, transform .15s; }
+    .pain-card { display: flex; flex-direction: column; gap: .18rem; border: 1px solid var(--rule); border-radius: 14px; padding: .85rem .95rem; background: var(--bg); color: var(--ink); text-decoration: none; transition: border-color .15s, background .15s, transform .15s; }
     .pain-card:hover { border-color: var(--accent); background: var(--bg2); transform: translateY(-2px); text-decoration: none; }
-    .pc-img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--bg2); }
-    .pc-body { display: flex; flex-direction: column; gap: .2rem; padding: .75rem .9rem .9rem; }
+    .pc-ico { font-size: 1.35rem; line-height: 1; }
     .pc-q { font-weight: 700; font-size: .98rem; }
     .pc-a { font-size: .86rem; color: var(--muted); line-height: 1.55; }
 
@@ -384,11 +383,6 @@
     .vgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; margin: .3rem 0 1.1rem; }
     .vcard { display: flex; gap: .7rem; align-items: flex-start; border: 1px solid var(--rule); border-radius: 12px; padding: .7rem .8rem; background: var(--bg); }
     .v-ico { flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; font-size: 1.25rem; background: var(--bg2); border: 1px solid var(--rule); }
-    /* 单品图片版网格 */
-    .vgrid.pic { grid-template-columns: repeat(3, 1fr); }
-    .vgrid.pic .vcard { flex-direction: column; gap: 0; align-items: stretch; padding: 0; overflow: hidden; }
-    .vgrid.pic .v-img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: var(--bg2); border-bottom: 1px solid var(--rule); }
-    .vgrid.pic .v-body { padding: .75rem .85rem .85rem; }
     .v-body { min-width: 0; }
     .v-t { font-weight: 700; font-size: .95rem; }
     .v-d { font-size: .86rem; color: var(--muted); line-height: 1.5; margin-top: .1rem; }
@@ -430,11 +424,10 @@
     @media (max-width: 920px) {
       .pain-grid { grid-template-columns: 1fr 1fr; }
       .vgrid { grid-template-columns: 1fr 1fr; }
-      .vgrid.pic { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 640px) {
       .view-toggle { padding: 0 10px; font-size: .8rem; }
-      .pain-grid, .vgrid, .vgrid.pic { grid-template-columns: 1fr; }
+      .pain-grid, .vgrid { grid-template-columns: 1fr; }
       .chips { grid-template-columns: 1fr 1fr; }
     }
   </style>
@@ -483,12 +476,12 @@
   <section class="pain-quick">
     <h2>高频痛点，点哪看哪</h2>
     <div class="pain-grid">
-      <a class="pain-card" href="#s1"><img class="pc-img" src="assets/gen/pain-belly.webp" alt="中年女性穿米色中长针织开衫，示范用 V 领与开衫修饰腰腹" width="720" height="405" loading="lazy" decoding="async"><span class="pc-body"><span class="pc-q">腰腹赘肉怎么遮</span><span class="pc-a">V 领 + 高腰 + 中长开衫，把视线移到胸口以上</span></span></a>
-      <a class="pain-card" href="#s4"><img class="pc-img" src="assets/gen/pain-arm.webp" alt="中年女性穿七分袖上衣，示范修饰手臂拜拜肉" width="720" height="405" loading="lazy" decoding="async"><span class="pc-body"><span class="pc-q">手臂拜拜肉</span><span class="pc-a">七分袖 / 中袖最稳，避开无袖和紧身袖</span></span></a>
-      <a class="pain-card" href="#s6"><img class="pc-img" src="assets/gen/pain-wedding.webp" alt="中年女性穿酒红色连衣裙搭配披肩，适合婚宴场合" width="720" height="405" loading="lazy" decoding="async"><span class="pc-body"><span class="pc-q">婚宴怎么穿得体</span><span class="pc-a">酒红 / 墨绿 / 藏青，别抢新娘风头</span></span></a>
-      <a class="pain-card" href="#s5"><img class="pc-img" src="assets/gen/pain-color.webp" alt="中年女性佩戴砖红色围巾搭配驼色毛衣，示范暖色显白" width="720" height="405" loading="lazy" decoding="async"><span class="pc-body"><span class="pc-q">什么颜色显白</span><span class="pc-a">暖皮用驼色砖红，冷皮用雾霾蓝藏青</span></span></a>
-      <a class="pain-card" href="#s2"><img class="pc-img" src="assets/gen/pain-age.webp" alt="中年女性穿灰蓝色西装外套，示范低饱和色不显老" width="720" height="405" loading="lazy" decoding="async"><span class="pc-body"><span class="pc-q">怎么穿不显老</span><span class="pc-a">降低饱和度 + 一衣多穿，不装嫩</span></span></a>
-      <a class="pain-card" href="#s11"><img class="pc-img" src="assets/gen/pain-resource.webp" alt="平铺的品牌杂志、面料色卡、软尺与手机购物页面" width="720" height="405" loading="lazy" decoding="async"><span class="pc-body"><span class="pc-q">优质穿搭资源</span><span class="pc-a">品牌官网 / 博主 / 面料 / 尺码一站找</span></span></a>
+      <a class="pain-card" href="#s1"><span class="pc-ico" aria-hidden="true">🫃</span><span class="pc-q">腰腹赘肉怎么遮</span><span class="pc-a">V 领 + 高腰 + 中长开衫，把视线移到胸口以上</span></a>
+      <a class="pain-card" href="#s4"><span class="pc-ico" aria-hidden="true">💪</span><span class="pc-q">手臂拜拜肉</span><span class="pc-a">七分袖 / 中袖最稳，避开无袖和紧身袖</span></a>
+      <a class="pain-card" href="#s6"><span class="pc-ico" aria-hidden="true">💍</span><span class="pc-q">婚宴怎么穿得体</span><span class="pc-a">酒红 / 墨绿 / 藏青，别抢新娘风头</span></a>
+      <a class="pain-card" href="#s5"><span class="pc-ico" aria-hidden="true">🎨</span><span class="pc-q">什么颜色显白</span><span class="pc-a">暖皮用驼色砖红，冷皮用雾霾蓝藏青</span></a>
+      <a class="pain-card" href="#s2"><span class="pc-ico" aria-hidden="true">🧓</span><span class="pc-q">怎么穿不显老</span><span class="pc-a">降低饱和度 + 一衣多穿，不装嫩</span></a>
+      <a class="pain-card" href="#s11"><span class="pc-ico" aria-hidden="true">🔗</span><span class="pc-q">优质穿搭资源</span><span class="pc-a">品牌官网 / 博主 / 面料 / 尺码一站找</span></a>
     </div>
   </section>
 
@@ -535,17 +528,17 @@
         </ul>
         <p class="tldr-k"><b>一句话：</b>把视线引到最瘦处，把赘肉交给版型去藏。</p>
       </div>
-      <div class="vgrid pic">
-        <div class="vcard"><img class="v-img" src="assets/gen/item-cardigan.webp" alt="米色中长款针织开衫单品展示" width="640" height="640" loading="lazy" decoding="async"><div class="v-body"><div class="v-t">针织开衫</div><div class="v-d">中长款过臀、敞开穿，V 字开口拉长上半身。</div><span class="v-avoid">避：紧身短款、粗棒针</span></div></div>
-        <div class="vcard"><img class="v-img" src="assets/gen/item-wideleg.webp" alt="藏青色高腰阔腿裤单品展示" width="640" height="640" loading="lazy" decoding="async"><div class="v-body"><div class="v-t">阔腿裤</div><div class="v-d">高腰 + 垂顺面料（醋酸 / 铜氨丝），配短上衣提腰线。</div><span class="v-avoid">避：低腰、软塌贴腿</span></div></div>
-        <div class="vcard"><img class="v-img" src="assets/gen/item-askirt.webp" alt="驼色过膝 A 字半身裙单品展示" width="640" height="640" loading="lazy" decoding="async"><div class="v-body"><div class="v-t">A 字半身裙</div><div class="v-d">过膝遮胯藏大腿，上紧下松最显瘦。</div><span class="v-avoid">避：包臀裙、百褶</span></div></div>
-        <div class="vcard"><img class="v-img" src="assets/gen/item-shirt.webp" alt="白色微宽松衬衫单品展示" width="640" height="640" loading="lazy" decoding="async"><div class="v-body"><div class="v-t">衬衫</div><div class="v-d">微宽松、前塞后放造腰线，卷袖露手腕。</div><span class="v-avoid">避：紧身裹身、泡泡袖</span></div></div>
-        <div class="vcard"><img class="v-img" src="assets/gen/item-trench.webp" alt="卡其色系带中长风衣单品展示" width="640" height="640" loading="lazy" decoding="async"><div class="v-body"><div class="v-t">风衣</div><div class="v-d">敞开 = 松弛，系带 = 收腰；卡其 / 藏青最百搭。</div><span class="v-avoid">避：内搭过厚显臃肿</span></div></div>
-        <div class="vcard"><img class="v-img" src="assets/gen/item-sweater.webp" alt="灰色 V 领羊绒毛衣单品展示" width="640" height="640" loading="lazy" decoding="async"><div class="v-body"><div class="v-t">羊绒 / 羊毛衫</div><div class="v-d">中等厚度垂坠款，V 领友好，半塞衣角提腰线。</div><span class="v-avoid">避：厚粗棒针、浅色膨胀</span></div></div>
-        <div class="vcard"><img class="v-img" src="assets/gen/item-acetate.webp" alt="香槟色醋酸绸缎上衣单品展示" width="640" height="640" loading="lazy" decoding="async"><div class="v-body"><div class="v-t">醋酸上衣</div><div class="v-d">三醋酸垂坠爽滑，微宽松藏腰腹，材质对比显高级。</div><span class="v-avoid">避：二醋酸干涩、太紧贴肚</span></div></div>
-        <div class="vcard"><img class="v-img" src="assets/gen/item-straight.webp" alt="深灰色中高腰直筒九分裤单品展示" width="640" height="640" loading="lazy" decoding="async"><div class="v-body"><div class="v-t">直筒 / 烟管裤</div><div class="v-d">中高腰 + 九分露脚踝，配尖头鞋延长腿线。</div><span class="v-avoid">避：低腰、紧身小脚</span></div></div>
-        <div class="vcard"><img class="v-img" src="assets/gen/item-dress.webp" alt="酒红色收腰 V 领连衣裙单品展示" width="640" height="640" loading="lazy" decoding="async"><div class="v-body"><div class="v-t">连衣裙</div><div class="v-d">有腰线（收腰 / 系带 / 高腰）+ V 领，及膝或小腿中部。</div><span class="v-avoid">避：无腰线直筒、太紧身</span></div></div>
-        <div class="vcard"><img class="v-img" src="assets/gen/item-shoesbag.webp" alt="裸色尖头高跟鞋与中号挺括手提单品展示" width="640" height="640" loading="lazy" decoding="async"><div class="v-body"><div class="v-t">鞋与包</div><div class="v-d">尖头鞋（裸色最显腿长），包选中号挺括、颜色呼应。</div><span class="v-avoid">避：超厚松糕鞋、大包压个子</span></div></div>
+      <div class="vgrid">
+        <div class="vcard"><div class="v-ico" aria-hidden="true">🧥</div><div class="v-body"><div class="v-t">针织开衫</div><div class="v-d">中长款过臀、敞开穿，V 字开口拉长上半身。</div><span class="v-avoid">避：紧身短款、粗棒针</span></div></div>
+        <div class="vcard"><div class="v-ico" aria-hidden="true">👖</div><div class="v-body"><div class="v-t">阔腿裤</div><div class="v-d">高腰 + 垂顺面料（醋酸 / 铜氨丝），配短上衣提腰线。</div><span class="v-avoid">避：低腰、软塌贴腿</span></div></div>
+        <div class="vcard"><div class="v-ico" aria-hidden="true">👗</div><div class="v-body"><div class="v-t">A 字半身裙</div><div class="v-d">过膝遮胯藏大腿，上紧下松最显瘦。</div><span class="v-avoid">避：包臀裙、百褶</span></div></div>
+        <div class="vcard"><div class="v-ico" aria-hidden="true">👔</div><div class="v-body"><div class="v-t">衬衫</div><div class="v-d">微宽松、前塞后放造腰线，卷袖露手腕。</div><span class="v-avoid">避：紧身裹身、泡泡袖</span></div></div>
+        <div class="vcard"><div class="v-ico" aria-hidden="true">🧥</div><div class="v-body"><div class="v-t">风衣</div><div class="v-d">敞开 = 松弛，系带 = 收腰；卡其 / 藏青最百搭。</div><span class="v-avoid">避：内搭过厚显臃肿</span></div></div>
+        <div class="vcard"><div class="v-ico" aria-hidden="true">🧶</div><div class="v-body"><div class="v-t">羊绒 / 羊毛衫</div><div class="v-d">中等厚度垂坠款，V 领友好，半塞衣角提腰线。</div><span class="v-avoid">避：厚粗棒针、浅色膨胀</span></div></div>
+        <div class="vcard"><div class="v-ico" aria-hidden="true">✨</div><div class="v-body"><div class="v-t">醋酸上衣</div><div class="v-d">三醋酸垂坠爽滑，微宽松藏腰腹，材质对比显高级。</div><span class="v-avoid">避：二醋酸干涩、太紧贴肚</span></div></div>
+        <div class="vcard"><div class="v-ico" aria-hidden="true">👖</div><div class="v-body"><div class="v-t">直筒 / 烟管裤</div><div class="v-d">中高腰 + 九分露脚踝，配尖头鞋延长腿线。</div><span class="v-avoid">避：低腰、紧身小脚</span></div></div>
+        <div class="vcard"><div class="v-ico" aria-hidden="true">👗</div><div class="v-body"><div class="v-t">连衣裙</div><div class="v-d">有腰线（收腰 / 系带 / 高腰）+ V 领，及膝或小腿中部。</div><span class="v-avoid">避：无腰线直筒、太紧身</span></div></div>
+        <div class="vcard"><div class="v-ico" aria-hidden="true">👠</div><div class="v-body"><div class="v-t">鞋与包</div><div class="v-d">尖头鞋（裸色最显腿长），包选中号挺括、颜色呼应。</div><span class="v-avoid">避：超厚松糕鞋、大包压个子</span></div></div>
       </div>
       <p class="lead">40 岁以后，身材会悄悄变化：腰腹堆肉、手臂松弛、胯宽腿粗。选对基础款，<mark class="key">用版型遮肉比靠节食更管用</mark>。下面十件是中大淑衣橱的"定海神针"，每件都给出显瘦穿法和避雷点。</p>
       <div class="table-wrap">
