@@ -1,6 +1,10 @@
-// assets/charts.js — 女装穿搭知识库 图表逻辑（进入视口再初始化）
+// assets/charts.js — 女装穿搭知识库 图表逻辑
+// 首次有图表进入视口时，才动态加载 echarts 并初始化，避免无条件下载 1MB 库。
 (function () {
-  if (typeof echarts === 'undefined') return;
+  var ECHARTS_SRC = './_shared/js/echarts.min.js';
+  var loadingPromise = null;
+  var instances = [];
+  var inited = {};
 
   var style = getComputedStyle(document.documentElement);
   var accent = style.getPropertyValue('--accent').trim();
@@ -13,7 +17,6 @@
   var font = style.getPropertyValue('--font').trim();
 
   var baseText = { fontFamily: font, color: muted };
-  var instances = [];
 
   // ---------- 图 7-1：服装电商退货率区间（横向条形） ----------
   function buildReturns(el) {
@@ -179,48 +182,64 @@
     return c;
   }
 
-  var registry = [
-    { id: 'chart-returns', build: buildReturns },
-    { id: 'chart-flow', build: buildFlow },
-    { id: 'chart-color', build: buildColor }
-  ];
+  var registry = {
+    'chart-returns': buildReturns,
+    'chart-flow': buildFlow,
+    'chart-color': buildColor
+  };
 
-  function initOne(item, el) {
-    try {
-      var c = item.build(el);
-      if (c) instances.push(c);
-    } catch (e) { /* 单个图表失败不影响其它 */ }
-  }
-
-  function initAll() {
-    registry.forEach(function (item) {
-      var el = document.getElementById(item.id);
-      if (el) initOne(item, el);
+  // 按需加载 echarts（全站仅加载一次）
+  function ensureECharts() {
+    if (window.echarts) return Promise.resolve();
+    if (loadingPromise) return loadingPromise;
+    loadingPromise = new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = ECHARTS_SRC;
+      s.async = true;
+      s.onload = function () { resolve(); };
+      s.onerror = function () { loadingPromise = null; reject(new Error('ECharts 加载失败')); };
+      document.head.appendChild(s);
     });
+    return loadingPromise;
   }
 
-  // 进入视口（含 200px 预量）后再初始化，减少首屏开销
+  function initChart(id) {
+    if (inited[id]) return;
+    var el = document.getElementById(id);
+    var build = registry[id];
+    if (!el || !build) return;
+    inited[id] = true;
+    try {
+      var c = build(el);
+      if (c) instances.push(c);
+    } catch (e) { /* 单图失败不影响其它 */ }
+  }
+
+  function initWhenVisible(ids) {
+    ensureECharts()
+      .then(function () { ids.forEach(initChart); })
+      .catch(function () { /* 加载失败则静默跳过，容器保持为空 */ });
+  }
+
+  var ids = Object.keys(registry);
+
   if ('IntersectionObserver' in window) {
-    var pending = registry.slice();
+    // 进入视口（含 200px 预量）后才加载库并初始化
     var io = new IntersectionObserver(function (entries) {
+      var visible = [];
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        for (var i = pending.length - 1; i >= 0; i--) {
-          if (document.getElementById(pending[i].id) === entry.target) {
-            initOne(pending[i], entry.target);
-            pending.splice(i, 1);
-          }
-        }
+        visible.push(entry.target.id);
         io.unobserve(entry.target);
-        if (!pending.length) io.disconnect();
       });
+      if (visible.length) initWhenVisible(visible);
     }, { rootMargin: '200px 0px' });
-    registry.forEach(function (item) {
-      var el = document.getElementById(item.id);
+    ids.forEach(function (id) {
+      var el = document.getElementById(id);
       if (el) io.observe(el);
     });
   } else {
-    initAll();
+    initWhenVisible(ids);
   }
 
   window.addEventListener('resize', function () {
