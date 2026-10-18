@@ -35,13 +35,13 @@
 
   <style>
     /* === Font faces (WOFF2 优先，TTF 回退) === */
-    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Regular.woff2') format('woff2'), url('./_shared/fonts/CrimsonPro-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
-    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Bold.woff2') format('woff2'), url('./_shared/fonts/CrimsonPro-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
-    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Italic.woff2') format('woff2'), url('./_shared/fonts/CrimsonPro-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
-    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Regular.woff2') format('woff2'), url('./_shared/fonts/WorkSans-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
-    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Bold.woff2') format('woff2'), url('./_shared/fonts/WorkSans-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
-    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Italic.woff2') format('woff2'), url('./_shared/fonts/WorkSans-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
-    @font-face { font-family: 'DMMono'; src: url('./_shared/fonts/DMMono-Regular.woff2') format('woff2'), url('./_shared/fonts/DMMono-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: 'CrimsonPro'; src: url('./_shared/fonts/CrimsonPro-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+    @font-face { font-family: 'WorkSans'; src: url('./_shared/fonts/WorkSans-Italic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+    @font-face { font-family: 'DMMono'; src: url('./_shared/fonts/DMMono-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
   </style>
 
   <style>
@@ -86,7 +86,7 @@
     .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
     .brand .logo { width: 32px; height: 32px; border-radius: 8px; background: var(--accent); color: #fff; display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
     .brand .name { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; white-space: nowrap; }
-    .brand .name small { display: block; font-family: var(--font-mono); font-size: .6rem; font-weight: 400; color: var(--muted); letter-spacing: .06em; }
+    .brand .name small { display: block; font-family: var(--font-mono); font-size: .68rem; font-weight: 400; color: var(--muted); letter-spacing: .06em; }
     .search-wrap { flex: 1; max-width: 520px; position: relative; }
     .search-wrap input {
       width: 100%; height: 38px; border: 1px solid var(--rule); border-radius: 999px;
@@ -105,7 +105,7 @@
     .search-results .sr-item { display: block; padding: 10px 14px; border-bottom: 1px solid var(--rule); color: var(--ink); text-decoration: none; }
     .search-results .sr-item:last-child { border-bottom: none; }
     .search-results .sr-item:hover { background: var(--bg2); text-decoration: none; }
-    .search-results .sr-cat { font-family: var(--font-mono); font-size: .66rem; color: var(--accent); letter-spacing: .05em; }
+    .search-results .sr-cat { font-family: var(--font-mono); font-size: .76rem; color: var(--accent); letter-spacing: .05em; }
     .search-results .sr-text { font-size: .88rem; margin-top: 2px; }
     .search-results .sr-empty { padding: 16px; color: var(--muted); font-size: .88rem; text-align: center; }
     .search-results .sr-item.active { background: var(--bg2); box-shadow: inset 3px 0 0 var(--accent); }
@@ -136,7 +136,7 @@
     .hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.04; letter-spacing: -.015em; margin: .5rem 0 .7rem; }
     .hero h1 em { font-style: italic; color: var(--accent); }
     .hero .lede { font-size: 1.08rem; color: var(--muted); max-width: 48ch; }
-    .hero .meta { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; font-family: var(--font-mono); font-size: .74rem; color: var(--muted); letter-spacing: .04em; }
+    .hero .meta { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; font-family: var(--font-mono); font-size: .8rem; color: var(--muted); letter-spacing: .04em; }
     .hero-figure { border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; background: var(--bg2); }
     .hero-figure img { aspect-ratio: 576/1024; object-fit: cover; max-height: 480px; width: 100%; }
 
@@ -151,20 +151,20 @@
     /* === Content sections === */
     .doc { max-width: var(--max); margin: 0 auto; padding: 32px 28px 40px; }
     .part { margin: 2.6rem 0 1rem; }
-    .part-kicker { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: .55rem; }
+    .part-kicker { font-family: var(--font-mono); font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: .55rem; }
     .part-kicker::before { content: ''; width: 24px; height: 2px; background: var(--accent); flex-shrink: 0; }
     .part-kicker::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
     .part-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-top: .2rem; }
     .doc-sec { margin-bottom: 2.8rem; border: 1px solid var(--rule); border-radius: 16px; padding: 28px 28px 24px; background: var(--bg); scroll-margin-top: calc(var(--header-h) + 12px); }
     .sec-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 1rem; }
     .sec-head-text { flex: 1; min-width: 0; }
-    .sec-num { display: inline-flex; align-items: center; gap: .35rem; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); background: var(--bg); border: 1px solid var(--rule); border-radius: 999px; padding: .12rem .55rem; }
+    .sec-num { display: inline-flex; align-items: center; gap: .35rem; font-family: var(--font-mono); font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); background: var(--bg); border: 1px solid var(--rule); border-radius: 999px; padding: .12rem .55rem; }
     .sec-num::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
     h2 { font-family: var(--font-display); font-size: 1.85rem; font-weight: 700; line-height: 1.18; margin-top: .25rem; }
     h3 { font-size: 1.15rem; font-weight: 700; margin: 1.5rem 0 .55rem; }
     h4 { font-size: 1rem; font-weight: 700; margin-bottom: .3rem; }
     .lead { font-size: 1.02rem; color: var(--ink); }
-    .mini { font-size: .84rem; color: var(--muted); line-height: 1.65; }
+    .mini { font-size: .9rem; color: var(--muted); line-height: 1.65; }
     .part-intro { display: grid; grid-template-columns: 160px 1fr; gap: 1.2rem; align-items: start; margin: .8rem 0 1.1rem; }
     .part-intro img { border-radius: 10px; border: 1px solid var(--rule); max-height: 160px; object-fit: cover; }
     .fav-btn { width: 36px; height: 36px; border-radius: 999px; border: 1px solid var(--rule); background: var(--bg); font-size: 1.1rem; flex-shrink: 0; display: grid; place-items: center; transition: all .15s; }
@@ -175,7 +175,7 @@
     .grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
     .card { border: 1px solid var(--rule); border-radius: 12px; padding: 1rem 1.1rem; background: var(--bg2); }
     .callout { border-left: 3px solid var(--accent); background: var(--bg2); padding: .9rem 1.1rem; border-radius: 0 10px 10px 0; margin: 1.2rem 0; font-size: .94rem; }
-    .callout-t { display: block; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: .3rem; }
+    .callout-t { display: block; font-family: var(--font-mono); font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: .3rem; }
 
     .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1rem 0; border: 1px solid var(--rule); border-radius: 12px; }
     table { width: 100%; border-collapse: collapse; font-size: .9rem; }
@@ -188,14 +188,14 @@
     .stat .num { font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; color: var(--accent); line-height: 1; }
     .stat .lbl { font-size: .76rem; color: var(--muted); margin-top: .35rem; }
 
-    .shape-code { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; color: var(--accent2); margin-bottom: .3rem; }
+    .shape-code { font-family: var(--font-mono); font-size: .76rem; letter-spacing: .08em; color: var(--accent2); margin-bottom: .3rem; }
 
     .chart-figure { margin: 1.3rem 0; }
-    .chart-figure figcaption { font-size: .78rem; color: var(--muted); margin-bottom: .5rem; text-align: center; }
+    .chart-figure figcaption { font-size: .8rem; color: var(--muted); margin-bottom: .5rem; text-align: center; }
     .chart-box { border: 1px solid var(--rule); border-radius: 12px; padding: .4rem; background: var(--bg); }
 
     .diagram { margin: 1.6rem 0; }
-    .diagram figcaption { font-size: .78rem; color: var(--muted); margin-top: .5rem; text-align: center; }
+    .diagram figcaption { font-size: .8rem; color: var(--muted); margin-top: .5rem; text-align: center; }
 
     /* === 零依赖静态图（替代 Mermaid） === */
     .dg { background: var(--bg2); border: 1px solid var(--rule); border-radius: 12px; padding: 1.3rem 1.1rem; }
@@ -211,7 +211,7 @@
     .ft-row { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
     .ft-leaf { flex: 1 1 170px; border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 8px; padding: .5rem .7rem; background: var(--bg2); }
     .ft-leaf b { display: block; font-size: .86rem; color: var(--accent); }
-    .ft-leaf span { display: block; font-size: .78rem; color: var(--muted); margin-top: .15rem; line-height: 1.5; }
+    .ft-leaf span { display: block; font-size: .8rem; color: var(--muted); margin-top: .15rem; line-height: 1.5; }
 
     /* 时间轴 */
     .tl { list-style: none; margin: 0; display: flex; gap: .5rem; padding: 1.4rem .1rem .1rem; }
@@ -220,7 +220,7 @@
     .tl-item::after { content: ''; position: absolute; top: .52rem; left: 11px; right: -.5rem; height: 2px; background: var(--rule); }
     .tl-item:last-child::after { display: none; }
     .tl-m { font-family: var(--font-mono); font-size: .8rem; font-weight: 700; color: var(--accent); }
-    .tl-body { font-size: .78rem; color: var(--muted); line-height: 1.55; margin-top: .2rem; }
+    .tl-body { font-size: .84rem; color: var(--muted); line-height: 1.55; margin-top: .2rem; }
 
     /* 四维拆解 */
     .ff { display: flex; flex-direction: column; align-items: center; }
@@ -229,7 +229,7 @@
     .ff-dims { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; width: 100%; }
     .ff-dim { border: 1px solid var(--rule); border-top: 3px solid var(--accent2); border-radius: 8px; padding: .55rem .6rem; background: var(--bg); text-align: center; }
     .ff-dim b { display: block; font-size: .86rem; color: var(--accent2); }
-    .ff-dim span { display: block; font-size: .74rem; color: var(--muted); margin-top: .2rem; line-height: 1.5; }
+    .ff-dim span { display: block; font-size: .78rem; color: var(--muted); margin-top: .2rem; line-height: 1.5; }
     .ff-merge { background: var(--accent); color: #fff; border-radius: 10px; padding: .5rem 1.2rem; font-weight: 700; font-size: .9rem; }
     .ff-result { border: 1px solid var(--accent); border-radius: 10px; padding: .55rem 1rem; font-size: .84rem; color: var(--ink); background: var(--bg); text-align: center; }
 
@@ -249,7 +249,7 @@
 
     /* 桌面右侧粘性目录 */
     .toc-side { display: none; }
-    .toc-side .toc-t { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: .7rem; }
+    .toc-side .toc-t { font-family: var(--font-mono); font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: .7rem; }
     .toc-side a { display: block; padding: .32rem .7rem; font-size: .82rem; color: var(--muted); border-left: 2px solid var(--rule); transition: color .15s, border-color .15s, background .15s; }
     .toc-side a:hover { color: var(--ink); background: var(--bg2); text-decoration: none; }
     .toc-side a.active { color: var(--accent); border-left-color: var(--accent); font-weight: 600; }
@@ -272,9 +272,9 @@
     .lc-body { flex: 1; min-width: 0; }
     .lc-top { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; }
     .lc-title { font-weight: 600; color: var(--ink); font-size: .95rem; }
-    .lc-note { font-size: .82rem; color: var(--muted); margin-top: .25rem; }
-    .lc-url { display: block; font-family: var(--font-mono); font-size: .69rem; color: var(--accent); margin-top: .25rem; word-break: break-all; }
-    .pill { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .06em; text-transform: uppercase; padding: .1rem .45rem; border-radius: 999px; border: 1px solid var(--rule); color: var(--accent2); background: var(--bg2); }
+    .lc-note { font-size: .86rem; color: var(--muted); margin-top: .25rem; }
+    .lc-url { display: block; font-family: var(--font-mono); font-size: .8rem; color: var(--accent); margin-top: .25rem; word-break: break-all; }
+    .pill { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; padding: .1rem .45rem; border-radius: 999px; border: 1px solid var(--rule); color: var(--accent2); background: var(--bg2); }
     .pill.cn { color: var(--accent); }
     .copy-btn { flex-shrink: 0; width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--rule); background: var(--bg); font-size: .85rem; display: grid; place-items: center; transition: all .15s; }
     .copy-btn:hover { border-color: var(--accent); background: var(--bg2); }
@@ -294,7 +294,7 @@
     footer .sources ol { padding-left: 1.3rem; font-size: .84rem; color: var(--muted); }
     footer .sources li { margin-bottom: .5rem; overflow-wrap: break-word; word-break: break-all; }
     footer .sources .src-title { color: var(--ink); word-break: normal; }
-    footer .sources .src-url { display: block; margin-top: .1rem; font-size: .78rem; color: var(--accent); word-break: break-all; font-family: var(--font-mono); }
+    footer .sources .src-url { display: block; margin-top: .1rem; font-size: .82rem; color: var(--accent); word-break: break-all; font-family: var(--font-mono); }
     footer .sources a { word-break: break-all; }
 
     .fab-top { position: fixed; right: 18px; bottom: 18px; width: 44px; height: 44px; border-radius: 999px; border: 1px solid var(--rule); background: var(--bg); box-shadow: 0 4px 16px rgba(31,27,24,.12); font-size: 1.1rem; display: grid; place-items: center; z-index: 90; opacity: 0; pointer-events: none; transition: opacity .2s; }
@@ -307,7 +307,7 @@
     .drawer.active { transform: translateX(0); }
     .drawer h3 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 14px; }
     .drawer .drawer-close { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 1.4rem; color: var(--muted); }
-    .drawer .d-group-t { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin: 14px 0 6px; }
+    .drawer .d-group-t { font-size: .76rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin: 14px 0 6px; }
     .drawer a { display: block; padding: 10px 12px; border-radius: 8px; color: var(--ink); font-size: .92rem; }
     .drawer a:hover { background: var(--bg2); text-decoration: none; }
     .menu-btn { display: none; }
@@ -362,7 +362,7 @@
 
   <!-- ============ TOP BAR ============ -->
   <header class="topbar">
-    <button class="icon-btn menu-btn" id="menuBtn" aria-label="章节目录" aria-haspopup="dialog" aria-controls="drawer" aria-expanded="false">☰</button>
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="章节目录" aria-haspopup="dialog" aria-controls="drawer" aria-expanded="false"><span aria-hidden="true">☰</span></button>
     <div class="brand">
       <div class="logo">穿</div>
       <div class="name">中大淑穿搭知识库<small>METHOD · OPS</small></div>
@@ -372,9 +372,9 @@
       <div class="search-results" id="searchResults" role="listbox" aria-label="搜索结果"></div>
       <span class="sr-only" id="searchStatus" aria-live="polite"></span>
     </div>
-    <button class="icon-btn" id="favToggle" aria-label="收藏" aria-haspopup="dialog" aria-controls="favView" aria-expanded="false">
-      <span id="favIcon">☆</span>
-      <span class="badge" id="favBadge" style="display:none">0</span>
+    <button class="icon-btn" id="favToggle" aria-label="我的收藏" aria-haspopup="dialog" aria-controls="favView" aria-expanded="false">
+      <span id="favIcon" aria-hidden="true">☆</span>
+      <span class="badge" id="favBadge" aria-hidden="true" style="display:none">0</span>
     </button>
   </header>
 
@@ -440,7 +440,7 @@
           <div class="sec-num">01 / 单品</div>
           <h2>中年必备基础款：十件单品的遮肉穿法</h2>
         </div>
-        <button class="fav-btn" data-id="s1" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s1" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <p class="lead">40 岁以后，身材会悄悄变化：腰腹堆肉、手臂松弛、胯宽腿粗。选对基础款，<mark class="key">用版型遮肉比靠节食更管用</mark>。下面十件是中大淑衣橱的"定海神针"，每件都给出显瘦穿法和避雷点。</p>
       <div class="table-wrap">
@@ -468,7 +468,7 @@
           <div class="sec-num">02 / 公式</div>
           <h2>搭配公式库：九条适合中年身材的显瘦公式</h2>
         </div>
-        <button class="fav-btn" data-id="s2" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s2" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <div class="part-intro">
         <img src="assets/thumb-formula.webp" alt="搭配公式配图" width="800" height="600" loading="lazy" decoding="async">
@@ -513,7 +513,7 @@
           <div class="sec-num">03 / 底层逻辑</div>
           <h2>穿搭的底层逻辑：四条原理，推导一切穿法</h2>
         </div>
-        <button class="fav-btn" data-id="s3" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s3" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <p class="lead">中年穿搭看似要注意很多细节，其实都收敛到四条底层原理。掌握它们，面对任何单品都能自己判断"能不能穿、怎么穿"，而不是盲目跟风。</p>
       <h3>1 · 平衡宽度（Balance）</h3>
@@ -533,7 +533,7 @@
           <div class="sec-num">04 / 身形诊断</div>
           <h2>身形诊断与扬长避短（含中年体型变化）</h2>
         </div>
-        <button class="fav-btn" data-id="s4" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s4" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <div class="part-intro">
         <img src="assets/thumb-body.webp" alt="身形分析配图" width="800" height="600" loading="lazy" decoding="async">
@@ -586,7 +586,7 @@
           <div class="sec-num">05 / 色彩</div>
           <h2>色彩搭配：显白提气色，不装嫩</h2>
         </div>
-        <button class="fav-btn" data-id="s5" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s5" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <div class="part-intro">
         <img src="assets/thumb-color.webp" alt="色彩搭配配图" width="800" height="600" loading="lazy" decoding="async">
@@ -636,7 +636,7 @@
           <div class="sec-num">06 / 场景</div>
           <h2>场景穿搭指南：中年女性八大高频场景</h2>
         </div>
-        <button class="fav-btn" data-id="s6" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s6" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <p class="lead">中年女性的社交场景和年轻时完全不同。下面八个高频场景，每个都给得体又显瘦的穿法，可直接对照做成店铺场景化专题。</p>
       <div class="grid cols-2">
@@ -662,7 +662,7 @@
           <div class="sec-num">07 / 尺码与退货</div>
           <h2>尺码指南与退货率控制</h2>
         </div>
-        <button class="fav-btn" data-id="s7" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s7" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <div class="part-intro">
         <img src="assets/thumb-ops.webp" alt="电商运营配图" width="800" height="450" loading="lazy" decoding="async">
@@ -709,7 +709,7 @@
           <div class="sec-num">08 / 话术</div>
           <h2>直播带货话术（面向中大淑客群）</h2>
         </div>
-        <button class="fav-btn" data-id="s8" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s8" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <p class="lead">中大淑客群不吃"宝宝们""家人们"那套，她们要的是<mark class="key">质感、遮肉、体面、不挑身材</mark>。话术要"说人话、懂她们、给信心"。</p>
       <h3>8.1 四段结构与时间配比</h3>
@@ -742,7 +742,7 @@
           <div class="sec-num">09 / 日历</div>
           <h2>内容选题日历（中大淑品类季节节奏）</h2>
         </div>
-        <button class="fav-btn" data-id="s9" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s9" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <p class="lead">通用主线：<mark class="key">季前上、季中促、季末清</mark>。中大淑品类要特别关注<strong>母亲节、妇女节、春节</strong>等送礼节点。</p>
       <figure class="diagram">
@@ -781,7 +781,7 @@
           <div class="sec-num">10 / 竞品</div>
           <h2>竞品与爆款拆解（中大淑品牌）</h2>
         </div>
-        <button class="fav-btn" data-id="s10" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s10" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <p class="lead">竞品 = <mark class="key">抢同一批中大淑客户、卖同类商品、价格带接近（±20%）</mark>的店铺。国内中大淑头部品牌是最好的拆解对象。按四维拆解。</p>
       <figure class="diagram">
@@ -849,59 +849,59 @@
           <div class="sec-num">11 / 链接库</div>
           <h2>中大淑实用资源链接库</h2>
         </div>
-        <button class="fav-btn" data-id="s11" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s11" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <p class="lead">精选六类对中大淑真正有用的资源：<strong>A 国内品牌官网</strong>、<strong>B 熟龄穿搭博主 / 媒体</strong>、<strong>C 身形显瘦实操</strong>、<strong>D 面料辨别</strong>、<strong>E 场景穿搭</strong>、<strong>F 体型尺码指南</strong>。点击卡片打开原页面，点右侧 📋 可复制链接。</p>
       <p class="link-hint">提示：链接在当前页打开。想保留本页，请 Ctrl/Cmd + 点击，或用右侧复制按钮复制 URL。</p>
 
       <h3>A · 国内中大淑品牌官网（看版型 · 看搭配 · 看价位）</h3>
       <div class="link-list">
-        <a class="link-card" href="https://www.girdear.cn/girdear.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">哥弟 Girdear</span><span class="lc-title">哥弟官方网站</span></div><div class="lc-note">国内中大淑标杆品牌，看经典版型与成套搭配，适合做详情页"一衣多穿"参考。</div><span class="lc-url">girdear.cn/girdear.html</span></div><button class="copy-btn" data-url="https://www.girdear.cn/girdear.html">📋</button></a>
-        <a class="link-card" href="http://www.juzui.com/w-index.asp"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">玖姿 JZ</span><span class="lc-title">玖姿官方网站</span></div><div class="lc-note">安正时尚集团旗下，成熟优雅风，色彩沉稳，通勤场景强。</div><span class="lc-url">juzui.com/w-index.asp</span></div><button class="copy-btn" data-url="http://www.juzui.com/w-index.asp">📋</button></a>
-        <a class="link-card" href="https://www.lancygroup.com/fashion_from25"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">朗姿 LANCY</span><span class="lc-title">朗姿官方网站</span></div><div class="lc-note">高端优雅女装，看面料质感与版型剪裁，品牌调性值得借鉴。</div><span class="lc-url">lancygroup.com/fashion_from25</span></div><button class="copy-btn" data-url="https://www.lancygroup.com/fashion_from25">📋</button></a>
-        <a class="link-card" href="http://www.cyinger.com/index.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">音儿 YINER</span><span class="lc-title">音儿官方网站</span></div><div class="lc-note">影儿集团，知性优雅职业女装，代言人刘涛形象贴合目标客群。</div><span class="lc-url">cyinger.com/index.html</span></div><button class="copy-btn" data-url="http://www.cyinger.com/index.html">📋</button></a>
-        <a class="link-card" href="http://www.yingergroup.com/profile.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">影儿集团</span><span class="lc-title">影儿时尚集团（音儿/诗篇/恩裳/歌中歌）</span></div><div class="lc-note">多品牌矩阵，覆盖知性到奢华全价位段，一次看清中大淑品牌布局。</div><span class="lc-url">yingergroup.com/profile.html</span></div><button class="copy-btn" data-url="http://www.yingergroup.com/profile.html">📋</button></a>
-        <a class="link-card" href="https://www.marisfrolg.com/en/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">玛丝菲尔</span><span class="lc-title">Marisfrolg 官方网站</span></div><div class="lc-note">高端原创女装，看原创设计与面料创新，艺术调性参考。</div><span class="lc-url">marisfrolg.com/en/</span></div><button class="copy-btn" data-url="https://www.marisfrolg.com/en/">📋</button></a>
-        <a class="link-card" href="http://www.cn-fish.com/index/fishing_man"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">渔 FISHING</span><span class="lc-title">渔牌官方网站</span></div><div class="lc-note">中国原创高端女装，东方元素 + 刺绣，做差异化风格可参考。</div><span class="lc-url">cn-fish.com/index/fishing_man</span></div><button class="copy-btn" data-url="http://www.cn-fish.com/index/fishing_man">📋</button></a>
-        <a class="link-card" href="https://www.bosideng.com/"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">波司登</span><span class="lc-title">波司登官方网站</span></div><div class="lc-note">羽绒服专家，看羽绒科技与保暖版型，冬装品类必看。</div><span class="lc-url">bosideng.com</span></div><button class="copy-btn" data-url="https://www.bosideng.com/">📋</button></a>
+        <a class="link-card" href="https://www.girdear.cn/girdear.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">哥弟 Girdear</span><span class="lc-title">哥弟官方网站</span></div><div class="lc-note">国内中大淑标杆品牌，看经典版型与成套搭配，适合做详情页"一衣多穿"参考。</div><span class="lc-url">girdear.cn/girdear.html</span></div><button class="copy-btn" data-url="https://www.girdear.cn/girdear.html" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="http://www.juzui.com/w-index.asp"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">玖姿 JZ</span><span class="lc-title">玖姿官方网站</span></div><div class="lc-note">安正时尚集团旗下，成熟优雅风，色彩沉稳，通勤场景强。</div><span class="lc-url">juzui.com/w-index.asp</span></div><button class="copy-btn" data-url="http://www.juzui.com/w-index.asp" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://www.lancygroup.com/fashion_from25"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">朗姿 LANCY</span><span class="lc-title">朗姿官方网站</span></div><div class="lc-note">高端优雅女装，看面料质感与版型剪裁，品牌调性值得借鉴。</div><span class="lc-url">lancygroup.com/fashion_from25</span></div><button class="copy-btn" data-url="https://www.lancygroup.com/fashion_from25" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="http://www.cyinger.com/index.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">音儿 YINER</span><span class="lc-title">音儿官方网站</span></div><div class="lc-note">影儿集团，知性优雅职业女装，代言人刘涛形象贴合目标客群。</div><span class="lc-url">cyinger.com/index.html</span></div><button class="copy-btn" data-url="http://www.cyinger.com/index.html" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="http://www.yingergroup.com/profile.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">影儿集团</span><span class="lc-title">影儿时尚集团（音儿/诗篇/恩裳/歌中歌）</span></div><div class="lc-note">多品牌矩阵，覆盖知性到奢华全价位段，一次看清中大淑品牌布局。</div><span class="lc-url">yingergroup.com/profile.html</span></div><button class="copy-btn" data-url="http://www.yingergroup.com/profile.html" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://www.marisfrolg.com/en/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">玛丝菲尔</span><span class="lc-title">Marisfrolg 官方网站</span></div><div class="lc-note">高端原创女装，看原创设计与面料创新，艺术调性参考。</div><span class="lc-url">marisfrolg.com/en/</span></div><button class="copy-btn" data-url="https://www.marisfrolg.com/en/" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="http://www.cn-fish.com/index/fishing_man"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">渔 FISHING</span><span class="lc-title">渔牌官方网站</span></div><div class="lc-note">中国原创高端女装，东方元素 + 刺绣，做差异化风格可参考。</div><span class="lc-url">cn-fish.com/index/fishing_man</span></div><button class="copy-btn" data-url="http://www.cn-fish.com/index/fishing_man" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://www.bosideng.com/"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">波司登</span><span class="lc-title">波司登官方网站</span></div><div class="lc-note">羽绒服专家，看羽绒科技与保暖版型，冬装品类必看。</div><span class="lc-url">bosideng.com</span></div><button class="copy-btn" data-url="https://www.bosideng.com/" aria-label="复制链接">📋</button></a>
       </div>
 
       <h3>B · 熟龄穿搭博主 / 媒体内容</h3>
       <div class="link-list">
-        <a class="link-card" href="https://view.inews.qq.com/a/20251202A01DM100"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">腾讯新闻</span><span class="lc-title">三木妈妈亲身示范：衣不紧身、不烫大妈头，年过50也没油腻感</span></div><div class="lc-note">50+ 穿搭天花板博主，极简基础款 + 直线条 + 微卷短发，遮胯藏肉的实穿示范。</div><span class="lc-url">view.inews.qq.com/a/20251202A01DM100</span></div><button class="copy-btn" data-url="https://view.inews.qq.com/a/20251202A01DM100">📋</button></a>
-        <a class="link-card" href="https://yule.360.com/detail/5022729"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">360 娱乐</span><span class="lc-title">40+ 张蕾"藏肉公式"火了，普通身材也能学</span></div><div class="lc-note">46 岁主持人的真实藏肉穿搭：深蓝背心 + 高腰垂坠阔腿裤 + 同色系纵向延伸。</div><span class="lc-url">yule.360.com/detail/5022729</span></div><button class="copy-btn" data-url="https://yule.360.com/detail/5022729">📋</button></a>
-        <a class="link-card" href="https://40plusstyle.com/fall-2025-trends/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">40+Style</span><span class="lc-title">Fall 2025 Trends & How to Wear Them</span></div><div class="lc-note">海外成熟女性穿搭标杆站，讲趋势怎么落地到 40+ 衣橱，棕色替代黑、同色系高级感。</div><span class="lc-url">40plusstyle.com/fall-2025-trends</span></div><button class="copy-btn" data-url="https://40plusstyle.com/fall-2025-trends/">📋</button></a>
-        <a class="link-card" href="https://c.m.163.com/news/a/K2EKT9SS05389TTU.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">网易号</span><span class="lc-title">这才是130斤妈妈该有的样子，不烫小卷、不穿花哨</span></div><div class="lc-note">微胖妈妈真实穿搭示范，简约高级不踩雷，适合做详情页"买家秀风格"参考。</div><span class="lc-url">c.m.163.com/news/a/K2EKT9SS05389TTU</span></div><button class="copy-btn" data-url="https://c.m.163.com/news/a/K2EKT9SS05389TTU.html">📋</button></a>
+        <a class="link-card" href="https://view.inews.qq.com/a/20251202A01DM100"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">腾讯新闻</span><span class="lc-title">三木妈妈亲身示范：衣不紧身、不烫大妈头，年过50也没油腻感</span></div><div class="lc-note">50+ 穿搭天花板博主，极简基础款 + 直线条 + 微卷短发，遮胯藏肉的实穿示范。</div><span class="lc-url">view.inews.qq.com/a/20251202A01DM100</span></div><button class="copy-btn" data-url="https://view.inews.qq.com/a/20251202A01DM100" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://yule.360.com/detail/5022729"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">360 娱乐</span><span class="lc-title">40+ 张蕾"藏肉公式"火了，普通身材也能学</span></div><div class="lc-note">46 岁主持人的真实藏肉穿搭：深蓝背心 + 高腰垂坠阔腿裤 + 同色系纵向延伸。</div><span class="lc-url">yule.360.com/detail/5022729</span></div><button class="copy-btn" data-url="https://yule.360.com/detail/5022729" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://40plusstyle.com/fall-2025-trends/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">40+Style</span><span class="lc-title">Fall 2025 Trends & How to Wear Them</span></div><div class="lc-note">海外成熟女性穿搭标杆站，讲趋势怎么落地到 40+ 衣橱，棕色替代黑、同色系高级感。</div><span class="lc-url">40plusstyle.com/fall-2025-trends</span></div><button class="copy-btn" data-url="https://40plusstyle.com/fall-2025-trends/" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://c.m.163.com/news/a/K2EKT9SS05389TTU.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">网易号</span><span class="lc-title">这才是130斤妈妈该有的样子，不烫小卷、不穿花哨</span></div><div class="lc-note">微胖妈妈真实穿搭示范，简约高级不踩雷，适合做详情页"买家秀风格"参考。</div><span class="lc-url">c.m.163.com/news/a/K2EKT9SS05389TTU</span></div><button class="copy-btn" data-url="https://c.m.163.com/news/a/K2EKT9SS05389TTU.html" aria-label="复制链接">📋</button></a>
       </div>
 
       <h3>C · 身形显瘦实操</h3>
       <div class="link-list">
-        <a class="link-card" href="https://www.fabulousafter40.com/how-to-hide-your-belly-clothing-tips/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">Fabulous After 40</span><span class="lc-title">How to Hide Your Belly: Style Secrets</span></div><div class="lc-note">高腰塑形、帝国腰线、垂坠面料、V 领纵向延伸，针对腰腹赘肉的实操技巧。</div><span class="lc-url">fabulousafter40.com/how-to-hide-your-belly</span></div><button class="copy-btn" data-url="https://www.fabulousafter40.com/how-to-hide-your-belly-clothing-tips/">📋</button></a>
-        <a class="link-card" href="https://www.covergrace.jp/articles/623"><div class="lc-body"><div class="lc-top"><span class="pill">日文</span><span class="pill">Cover Grace</span><span class="lc-title">40/50 代微胖体型覆盖穿搭 25 单品</span></div><div class="lc-note">日本骨格诊断师监修，针对腰腹的"无腰线切换上衣"等遮肉单品选择法。</div><span class="lc-url">covergrace.jp/articles/623</span></div><button class="copy-btn" data-url="https://www.covergrace.jp/articles/623">📋</button></a>
-        <a class="link-card" href="https://stylisteer.com/how-to-dress-over-40-and-overweight/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">Stylesteer</span><span class="lc-title">How to Dress Over 40 When Overweight</span></div><div class="lc-note">9 条 40+ 微胖穿搭法则：合身不贴身、纵向线条、有限色板、垂坠面料优先。</div><span class="lc-url">stylisteer.com/how-to-dress-over-40-and-overweight</span></div><button class="copy-btn" data-url="https://stylisteer.com/how-to-dress-over-40-and-overweight/">📋</button></a>
+        <a class="link-card" href="https://www.fabulousafter40.com/how-to-hide-your-belly-clothing-tips/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">Fabulous After 40</span><span class="lc-title">How to Hide Your Belly: Style Secrets</span></div><div class="lc-note">高腰塑形、帝国腰线、垂坠面料、V 领纵向延伸，针对腰腹赘肉的实操技巧。</div><span class="lc-url">fabulousafter40.com/how-to-hide-your-belly</span></div><button class="copy-btn" data-url="https://www.fabulousafter40.com/how-to-hide-your-belly-clothing-tips/" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://www.covergrace.jp/articles/623"><div class="lc-body"><div class="lc-top"><span class="pill">日文</span><span class="pill">Cover Grace</span><span class="lc-title">40/50 代微胖体型覆盖穿搭 25 单品</span></div><div class="lc-note">日本骨格诊断师监修，针对腰腹的"无腰线切换上衣"等遮肉单品选择法。</div><span class="lc-url">covergrace.jp/articles/623</span></div><button class="copy-btn" data-url="https://www.covergrace.jp/articles/623" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://stylisteer.com/how-to-dress-over-40-and-overweight/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">Stylesteer</span><span class="lc-title">How to Dress Over 40 When Overweight</span></div><div class="lc-note">9 条 40+ 微胖穿搭法则：合身不贴身、纵向线条、有限色板、垂坠面料优先。</div><span class="lc-url">stylisteer.com/how-to-dress-over-40-and-overweight</span></div><button class="copy-btn" data-url="https://stylisteer.com/how-to-dress-over-40-and-overweight/" aria-label="复制链接">📋</button></a>
       </div>
 
       <h3>D · 面料知识与品质辨别</h3>
       <div class="link-list">
-        <a class="link-card" href="http://paper.people.com.cn/rmrbhwb/html/2015-04/29/content_1559561.htm"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">人民日报海外版</span><span class="lc-title">真丝绸鉴别方法</span></div><div class="lc-note">国家丝绸检验中心主任撰文：眼观、手摸、燃烧、溶解、显微镜五步法辨真假。</div><span class="lc-url">paper.people.com.cn/rmrbhwb/html/2015-04/29/content_1559561</span></div><button class="copy-btn" data-url="http://paper.people.com.cn/rmrbhwb/html/2015-04/29/content_1559561.htm">📋</button></a>
-        <a class="link-card" href="http://ccta.org.cn/fmcp/xxml/202209/t20220926_4257567.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">中国棉纺织行业协会</span><span class="lc-title">二醋酸与三醋酸的区别</span></div><div class="lc-note">官方讲解：三醋酸更顺滑悬垂接近真丝，二醋酸偏干涩，教你看成分标辨别。</div><span class="lc-url">ccta.org.cn/fmcp/xxml/202209/t20220926_4257567.html</span></div><button class="copy-btn" data-url="http://ccta.org.cn/fmcp/xxml/202209/t20220926_4257567.html">📋</button></a>
-        <a class="link-card" href="https://web.dhu.edu.cn/mtc/2011/1212/c4082a29942/page.psp"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">东华大学</span><span class="lc-title">纤维的鉴别方法</span></div><div class="lc-note">纺织类高校官方教学资料：棉/毛/丝/麻/涤纶燃烧气味与灰烬对照表，权威可靠。</div><span class="lc-url">web.dhu.edu.cn/mtc/2011/1212/c4082a29942</span></div><button class="copy-btn" data-url="https://web.dhu.edu.cn/mtc/2011/1212/c4082a29942/page.psp">📋</button></a>
-        <a class="link-card" href="https://m.tnc.com.cn/juhe/d13730/"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">全球纺织网</span><span class="lc-title">真假铜氨面料鉴别</span></div><div class="lc-note">手感凉感、珍珠光泽、燃烧测试等方法辨铜氨丝，避免被仿品忽悠。</div><span class="lc-url">m.tnc.com.cn/juhe/d13730/</span></div><button class="copy-btn" data-url="https://m.tnc.com.cn/juhe/d13730/">📋</button></a>
+        <a class="link-card" href="http://paper.people.com.cn/rmrbhwb/html/2015-04/29/content_1559561.htm"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">人民日报海外版</span><span class="lc-title">真丝绸鉴别方法</span></div><div class="lc-note">国家丝绸检验中心主任撰文：眼观、手摸、燃烧、溶解、显微镜五步法辨真假。</div><span class="lc-url">paper.people.com.cn/rmrbhwb/html/2015-04/29/content_1559561</span></div><button class="copy-btn" data-url="http://paper.people.com.cn/rmrbhwb/html/2015-04/29/content_1559561.htm" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="http://ccta.org.cn/fmcp/xxml/202209/t20220926_4257567.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">中国棉纺织行业协会</span><span class="lc-title">二醋酸与三醋酸的区别</span></div><div class="lc-note">官方讲解：三醋酸更顺滑悬垂接近真丝，二醋酸偏干涩，教你看成分标辨别。</div><span class="lc-url">ccta.org.cn/fmcp/xxml/202209/t20220926_4257567.html</span></div><button class="copy-btn" data-url="http://ccta.org.cn/fmcp/xxml/202209/t20220926_4257567.html" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://web.dhu.edu.cn/mtc/2011/1212/c4082a29942/page.psp"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">东华大学</span><span class="lc-title">纤维的鉴别方法</span></div><div class="lc-note">纺织类高校官方教学资料：棉/毛/丝/麻/涤纶燃烧气味与灰烬对照表，权威可靠。</div><span class="lc-url">web.dhu.edu.cn/mtc/2011/1212/c4082a29942</span></div><button class="copy-btn" data-url="https://web.dhu.edu.cn/mtc/2011/1212/c4082a29942/page.psp" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://m.tnc.com.cn/juhe/d13730/"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">全球纺织网</span><span class="lc-title">真假铜氨面料鉴别</span></div><div class="lc-note">手感凉感、珍珠光泽、燃烧测试等方法辨铜氨丝，避免被仿品忽悠。</div><span class="lc-url">m.tnc.com.cn/juhe/d13730/</span></div><button class="copy-btn" data-url="https://m.tnc.com.cn/juhe/d13730/" aria-label="复制链接">📋</button></a>
       </div>
 
       <h3>E · 场景穿搭集合</h3>
       <div class="link-list">
-        <a class="link-card" href="https://view.inews.qq.com/k/20250609A0523O00"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">腾讯新闻</span><span class="lc-title">40+ 女性太适合"裙子"了，搭配衬衫T恤遮肉显瘦</span></div><div class="lc-note">松不穿紧、颜色不花哨，半身裙 + 衬衫的优雅得体公式，通勤见客接娃通吃。</div><span class="lc-url">view.inews.qq.com/k/20250609A0523O00</span></div><button class="copy-btn" data-url="https://view.inews.qq.com/k/20250609A0523O00">📋</button></a>
-        <a class="link-card" href="https://theweddingbluebook.com/best-formal-pant-suits-for-women-for-weddings/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">Wedding Bluebook</span><span class="lc-title">婚宴正装裤装推荐（妈妈 / 宾客）</span></div><div class="lc-note">Mother of the Bride 正式裤装指南，优雅舒适、方便活动，婚宴得体穿搭参考。</div><span class="lc-url">theweddingbluebook.com/best-formal-pant-suits-for-women-for-weddings</span></div><button class="copy-btn" data-url="https://theweddingbluebook.com/best-formal-pant-suits-for-women-for-weddings/">📋</button></a>
-        <a class="link-card" href="https://wearinsight.org/best-mother-of-the-bride-suites/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">Wear Insight</span><span class="lc-title">2026 婚宴妈妈装套装精选</span></div><div class="lc-note">按身材和场合推荐妈妈装，从轻便雪纺到亮片三件套，见家长 / 婚宴都适用。</div><span class="lc-url">wearinsight.org/best-mother-of-the-bride-suites</span></div><button class="copy-btn" data-url="https://wearinsight.org/best-mother-of-the-bride-suites/">📋</button></a>
+        <a class="link-card" href="https://view.inews.qq.com/k/20250609A0523O00"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">腾讯新闻</span><span class="lc-title">40+ 女性太适合"裙子"了，搭配衬衫T恤遮肉显瘦</span></div><div class="lc-note">松不穿紧、颜色不花哨，半身裙 + 衬衫的优雅得体公式，通勤见客接娃通吃。</div><span class="lc-url">view.inews.qq.com/k/20250609A0523O00</span></div><button class="copy-btn" data-url="https://view.inews.qq.com/k/20250609A0523O00" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://theweddingbluebook.com/best-formal-pant-suits-for-women-for-weddings/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">Wedding Bluebook</span><span class="lc-title">婚宴正装裤装推荐（妈妈 / 宾客）</span></div><div class="lc-note">Mother of the Bride 正式裤装指南，优雅舒适、方便活动，婚宴得体穿搭参考。</div><span class="lc-url">theweddingbluebook.com/best-formal-pant-suits-for-women-for-weddings</span></div><button class="copy-btn" data-url="https://theweddingbluebook.com/best-formal-pant-suits-for-women-for-weddings/" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://wearinsight.org/best-mother-of-the-bride-suites/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">Wear Insight</span><span class="lc-title">2026 婚宴妈妈装套装精选</span></div><div class="lc-note">按身材和场合推荐妈妈装，从轻便雪纺到亮片三件套，见家长 / 婚宴都适用。</div><span class="lc-url">wearinsight.org/best-mother-of-the-bride-suites</span></div><button class="copy-btn" data-url="https://wearinsight.org/best-mother-of-the-bride-suites/" aria-label="复制链接">📋</button></a>
       </div>
 
       <h3>F · 体型尺码指南</h3>
       <div class="link-list">
-        <a class="link-card" href="https://www.nike.com.cn/size-fit/womens-numeric"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">NIKE 官方</span><span class="lc-title">女子数字尺码表 + 测量方法</span></div><div class="lc-note">官方胸围 / 腰围 / 臀围 / 腿长测量示意图，标准规范，做尺码表直接抄。</div><span class="lc-url">nike.com.cn/size-fit/womens-numeric</span></div><button class="copy-btn" data-url="https://www.nike.com.cn/size-fit/womens-numeric">📋</button></a>
-        <a class="link-card" href="https://www.muji.com.cn/cn/net/contents/contact/choose/"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">无印良品</span><span class="lc-title">裸身尺寸尺码表 · 如何测量</span></div><div class="lc-note">无印良品官方：裸身测量胸围 / 腰围 / 臀围 / 裤长的标准方法，简洁易懂。</div><span class="lc-url">muji.com.cn/cn/net/contents/contact/choose</span></div><button class="copy-btn" data-url="https://www.muji.com.cn/cn/net/contents/contact/choose/">📋</button></a>
-        <a class="link-card" href="https://m.maigoo.com/goomai/302512.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">买购网</span><span class="lc-title">女装尺码选择与测量方法</span></div><div class="lc-note">胸围、腰围、臀围的标准测量方法，附尺码对照，做详情页尺码表直接参考。</div><span class="lc-url">m.maigoo.com/goomai/302512.html</span></div><button class="copy-btn" data-url="https://m.maigoo.com/goomai/302512.html">📋</button></a>
-        <a class="link-card" href="https://curvykit.com/guides/plus-size-measurements/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">Curvy Kit</span><span class="lc-title">大码三围测量指南</span></div><div class="lc-note">大码女性胸围腰围臀围的精确测量方法，帮顾客选对码数降低退货。</div><span class="lc-url">curvykit.com/guides/plus-size-measurements</span></div><button class="copy-btn" data-url="https://curvykit.com/guides/plus-size-measurements/">📋</button></a>
+        <a class="link-card" href="https://www.nike.com.cn/size-fit/womens-numeric"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">NIKE 官方</span><span class="lc-title">女子数字尺码表 + 测量方法</span></div><div class="lc-note">官方胸围 / 腰围 / 臀围 / 腿长测量示意图，标准规范，做尺码表直接抄。</div><span class="lc-url">nike.com.cn/size-fit/womens-numeric</span></div><button class="copy-btn" data-url="https://www.nike.com.cn/size-fit/womens-numeric" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://www.muji.com.cn/cn/net/contents/contact/choose/"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">无印良品</span><span class="lc-title">裸身尺寸尺码表 · 如何测量</span></div><div class="lc-note">无印良品官方：裸身测量胸围 / 腰围 / 臀围 / 裤长的标准方法，简洁易懂。</div><span class="lc-url">muji.com.cn/cn/net/contents/contact/choose</span></div><button class="copy-btn" data-url="https://www.muji.com.cn/cn/net/contents/contact/choose/" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://m.maigoo.com/goomai/302512.html"><div class="lc-body"><div class="lc-top"><span class="pill cn">中文</span><span class="pill">买购网</span><span class="lc-title">女装尺码选择与测量方法</span></div><div class="lc-note">胸围、腰围、臀围的标准测量方法，附尺码对照，做详情页尺码表直接参考。</div><span class="lc-url">m.maigoo.com/goomai/302512.html</span></div><button class="copy-btn" data-url="https://m.maigoo.com/goomai/302512.html" aria-label="复制链接">📋</button></a>
+        <a class="link-card" href="https://curvykit.com/guides/plus-size-measurements/"><div class="lc-body"><div class="lc-top"><span class="pill">英文</span><span class="pill">Curvy Kit</span><span class="lc-title">大码三围测量指南</span></div><div class="lc-note">大码女性胸围腰围臀围的精确测量方法，帮顾客选对码数降低退货。</div><span class="lc-url">curvykit.com/guides/plus-size-measurements</span></div><button class="copy-btn" data-url="https://curvykit.com/guides/plus-size-measurements/" aria-label="复制链接">📋</button></a>
       </div>
     </section>
 
@@ -911,7 +911,7 @@
           <div class="sec-num">12 / 落地</div>
           <h2>一页纸落地清单</h2>
         </div>
-        <button class="fav-btn" data-id="s12" aria-label="收藏">☆</button>
+        <button class="fav-btn" data-id="s12" aria-label="收藏此章节" aria-pressed="false">☆</button>
       </div>
       <p class="lead">压缩成一页可执行动作。按"内容 → 详情页 → 直播 → 选品"四条线，每周推进一项，专为中大淑品类定制。</p>
       <div class="grid cols-2">
@@ -926,8 +926,8 @@
   <!-- ============ FAVORITES DRAWER ============ -->
   <div class="fav-view" id="favView">
     <div class="fav-panel" role="dialog" aria-modal="true" aria-label="我的收藏" aria-hidden="true">
-      <button class="fav-close" id="favClose">×</button>
-      <h3>⭐ 我的收藏</h3>
+      <button class="fav-close" id="favClose" aria-label="关闭收藏面板"><span aria-hidden="true">×</span></button>
+      <h3><span aria-hidden="true">⭐</span> 我的收藏</h3>
       <div id="favList"></div>
     </div>
   </div>
@@ -935,7 +935,7 @@
   <!-- ============ MOBILE DRAWER ============ -->
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="章节目录" aria-hidden="true">
-    <button class="drawer-close" id="drawerClose">×</button>
+    <button class="drawer-close" id="drawerClose" aria-label="关闭目录"><span aria-hidden="true">×</span></button>
     <h3>目录</h3>
     <div class="d-group-t">实操篇</div>
     <a href="#s1">01 · 中年必备基础款</a>
@@ -955,7 +955,7 @@
     <a href="#s12">12 · 落地清单</a>
   </div>
 
-  <button class="fab-top" id="fabTop" aria-label="回到顶部">↑</button>
+  <button class="fab-top" id="fabTop" aria-label="回到顶部"><span aria-hidden="true">↑</span></button>
 
   <!-- ============ SOURCES ============ -->
   <footer>
@@ -1001,10 +1001,17 @@
       const icon = document.getElementById('favIcon');
       if (favs.length) { badge.style.display = 'grid'; badge.textContent = favs.length; icon.textContent = '★'; }
       else { badge.style.display = 'none'; icon.textContent = '☆'; }
+      const toggleEl = document.getElementById('favToggle');
+      if (toggleEl) toggleEl.setAttribute('aria-label', favs.length ? `我的收藏（${favs.length} 条）` : '我的收藏');
       document.querySelectorAll('.fav-btn').forEach(btn => {
         const id = btn.dataset.id;
-        if (favs.includes(id)) { btn.classList.add('faved'); btn.textContent = '★'; }
-        else { btn.classList.remove('faved'); btn.textContent = '☆'; }
+        const sec = document.getElementById(id);
+        const title = sec?.querySelector('h2')?.textContent || '此章节';
+        const on = favs.includes(id);
+        btn.classList.toggle('faved', on);
+        btn.textContent = on ? '★' : '☆';
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        btn.setAttribute('aria-label', (on ? '取消收藏：' : '收藏：') + title);
       });
     }
     function renderFavList() {
@@ -1015,7 +1022,7 @@
         const sec = document.getElementById(id);
         if (!sec) return '';
         const title = sec.querySelector('h2')?.textContent || id;
-        return `<div class="fav-item"><a href="#${id}">${title}</a><button data-rm="${id}" aria-label="移除">×</button></div>`;
+        return `<div class="fav-item"><a href="#${id}">${title}</a><button data-rm="${id}" aria-label="移除：${title}"><span aria-hidden="true">×</span></button></div>`;
       }).join('');
       list.querySelectorAll('[data-rm]').forEach(btn => {
         btn.addEventListener('click', e => {
@@ -1038,8 +1045,23 @@
     const favView = document.getElementById('favView');
     const favPanel = favView.querySelector('.fav-panel');
     const favToggle = document.getElementById('favToggle');
-    function openFav() { renderFavList(); favView.classList.add('active'); favPanel.setAttribute('aria-hidden', 'false'); favToggle.setAttribute('aria-expanded', 'true'); }
-    function closeFav() { favView.classList.remove('active'); favPanel.setAttribute('aria-hidden', 'true'); favToggle.setAttribute('aria-expanded', 'false'); }
+    let favReturnFocus = null;
+    function openFav() {
+      favReturnFocus = document.activeElement;
+      renderFavList();
+      favView.classList.add('active');
+      favPanel.setAttribute('aria-hidden', 'false');
+      favToggle.setAttribute('aria-expanded', 'true');
+      document.getElementById('favClose').focus();
+    }
+    function closeFav() {
+      if (!favView.classList.contains('active')) return;
+      favView.classList.remove('active');
+      favPanel.setAttribute('aria-hidden', 'true');
+      favToggle.setAttribute('aria-expanded', 'false');
+      if (favReturnFocus && favReturnFocus.focus) favReturnFocus.focus();
+      favReturnFocus = null;
+    }
     favToggle.addEventListener('click', openFav);
     document.getElementById('favClose').addEventListener('click', closeFav);
     favView.addEventListener('click', e => { if (e.target.id === 'favView') closeFav(); });
@@ -1146,7 +1168,9 @@
           const ta = document.createElement('textarea'); ta.value = url; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
         }
         btn.classList.add('copied'); btn.textContent = '✓';
-        setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '📋'; }, 1500);
+        const prevLabel = btn.getAttribute('aria-label');
+        btn.setAttribute('aria-label', '已复制链接');
+        setTimeout(() => { btn.classList.remove('copied'); btn.textContent = '📋'; btn.setAttribute('aria-label', prevLabel); }, 1500);
       });
     });
 
@@ -1154,12 +1178,33 @@
     const drawer = document.getElementById('drawer');
     const drawerOverlay = document.getElementById('drawerOverlay');
     const menuBtn = document.getElementById('menuBtn');
-    function openDrawer() { drawer.classList.add('active'); drawerOverlay.classList.add('active'); drawer.setAttribute('aria-hidden', 'false'); menuBtn.setAttribute('aria-expanded', 'true'); }
+    let drawerReturnFocus = null;
+    function openDrawer() {
+      drawerReturnFocus = document.activeElement;
+      drawer.classList.add('active');
+      drawerOverlay.classList.add('active');
+      drawer.setAttribute('aria-hidden', 'false');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      document.getElementById('drawerClose').focus();
+    }
+    function closeDrawer() {
+      if (!drawer.classList.contains('active')) return;
+      drawer.classList.remove('active');
+      drawerOverlay.classList.remove('active');
+      drawer.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      if (drawerReturnFocus && drawerReturnFocus.focus) drawerReturnFocus.focus();
+      drawerReturnFocus = null;
+    }
     menuBtn.addEventListener('click', openDrawer);
     document.getElementById('drawerClose').addEventListener('click', closeDrawer);
     drawerOverlay.addEventListener('click', closeDrawer);
     drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
-    function closeDrawer() { drawer.classList.remove('active'); drawerOverlay.classList.remove('active'); drawer.setAttribute('aria-hidden', 'true'); menuBtn.setAttribute('aria-expanded', 'false'); }
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Escape') return;
+      if (favView.classList.contains('active')) closeFav();
+      else if (drawer.classList.contains('active')) closeDrawer();
+    });
 
     // ===== Back to top =====
     const fabTop = document.getElementById('fabTop');
