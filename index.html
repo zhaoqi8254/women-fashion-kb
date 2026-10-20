@@ -509,7 +509,7 @@
       <div class="part-title">实操篇 · 拿来就用</div>
     </div>
 
-    <section class="doc-sec" id="s1">
+    <section class="doc-sec" id="s1" data-doc="look">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">01 / 单品</div>
@@ -560,7 +560,7 @@
       </div>
     </section>
 
-    <section class="doc-sec" id="s2">
+    <section class="doc-sec" id="s2" data-doc="look">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">02 / 公式</div>
@@ -616,7 +616,7 @@
       <div class="part-title">基础篇 · 先看懂，再下手</div>
     </div>
 
-    <section class="doc-sec" id="s3">
+    <section class="doc-sec" id="s3" data-doc="knowledge">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">03 / 底层逻辑</div>
@@ -646,7 +646,7 @@
       <div class="callout"><span class="callout-t">一句话工作流</span>先<strong>诊断</strong>（身形与赘肉位置）→ 再<strong>遮挡</strong>（用版型遮住最胖处）→ 然后<strong>转移</strong>（把视线引到最瘦的部位）→ 最后<strong>点睛</strong>（不超过 10% 的配饰）。</div>
     </section>
 
-    <section class="doc-sec" id="s4">
+    <section class="doc-sec" id="s4" data-doc="knowledge">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">04 / 身形诊断</div>
@@ -710,7 +710,7 @@
       </div>
     </section>
 
-    <section class="doc-sec" id="s5">
+    <section class="doc-sec" id="s5" data-doc="knowledge">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">05 / 色彩</div>
@@ -786,7 +786,7 @@
       </div>
     </section>
 
-    <section class="doc-sec" id="s6">
+    <section class="doc-sec" id="s6" data-doc="look">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">06 / 场景</div>
@@ -833,7 +833,7 @@
       <div class="part-title">运营篇 · 把穿搭变成生意</div>
     </div>
 
-    <section class="doc-sec" id="s7">
+    <section class="doc-sec" id="s7" data-doc="knowledge">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">07 / 尺码与退货</div>
@@ -890,7 +890,7 @@
       </div>
     </section>
 
-    <section class="doc-sec" id="s8">
+    <section class="doc-sec" id="s8" data-doc="knowledge">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">08 / 话术</div>
@@ -934,7 +934,7 @@
       <div class="callout"><span class="callout-t">中大淑话术要点</span>不说"宝宝""家人们"，说"姐姐""姐妹们"；不夸大"瘦 20 斤"，说"视觉上比例修长一圈"；承诺要落地（7 天无理由 + 运费险），建立信任比逼单重要。</div>
     </section>
 
-    <section class="doc-sec" id="s9">
+    <section class="doc-sec" id="s9" data-doc="knowledge">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">09 / 日历</div>
@@ -982,7 +982,7 @@
       </div>
     </section>
 
-    <section class="doc-sec" id="s10">
+    <section class="doc-sec" id="s10" data-doc="knowledge">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">10 / 竞品</div>
@@ -1060,7 +1060,7 @@
       <div class="part-title">资源篇 · 实用链接与落地</div>
     </div>
 
-    <section class="doc-sec" id="s11">
+    <section class="doc-sec" id="s11" data-doc="knowledge">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">11 / 链接库</div>
@@ -1130,7 +1130,7 @@
       </div>
     </section>
 
-    <section class="doc-sec" id="s12">
+    <section class="doc-sec" id="s12" data-doc="knowledge">
       <div class="sec-head">
         <div class="sec-head-text">
           <div class="sec-num">12 / 落地</div>
@@ -1323,7 +1323,7 @@
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
     function escapeHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
-    const SYN = {
+    const INPUT_ALIAS = {
       '拜拜肉': ['手臂'], '蝴蝶袖': ['手臂'], '手臂': ['拜拜肉', '蝴蝶袖'],
       '遮肚子': ['腰腹', '肚子'], '肚子': ['腰腹'], '大肚腩': ['腰腹'], '小肚子': ['腰腹'], '水桶腰': ['腰腹'],
       '显白': ['颜色', '色彩'], '显色': ['颜色'], '色系': ['颜色', '色彩'],
@@ -1361,7 +1361,7 @@
     function doSearch(raw) {
       const q = raw.trim();
       if (!q) { closeSearch(); searchResults.innerHTML = ''; if (searchStatus) searchStatus.textContent = ''; return; }
-      const groups = q.toLowerCase().split(/\s+/).filter(Boolean).map(t => [t].concat(SYN[t] || []));
+      const groups = q.toLowerCase().split(/\s+/).filter(Boolean).map(t => [t].concat(INPUT_ALIAS[t] || []));
       const res = [];
       document.querySelectorAll('.doc-sec').forEach(sec => {
         const text = sec.textContent;
